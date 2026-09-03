@@ -3,623 +3,747 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Şile Haber Merkezi</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <!-- GOOGLE FONT -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap"
         rel="stylesheet"
     >
 
-    <!-- Font Awesome -->
+    <!-- FONT AWESOME -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 </head>
 
+
 <body>
 
-    <!-- =========================
-         CANLI HABER BANDI
-    ========================== -->
 
-    <div class="live-bar">
+<!-- ==================================================
+     CANLI HABER BANDI
+================================================== -->
 
-        <div class="live">
-            <span class="live-dot"></span>
-            CANLI
-        </div>
+<div class="live-bar">
 
-        <div class="breaking">
-            <small>09:41</small>
-            Şile Limanı’nda hamsi 180 liraya indi
-        </div>
+    <div class="live-label">
 
-        <div class="breaking">
-            <small>09:41</small>
-            Ağva yolunda asfalt çalışması başladı
-        </div>
+        <span class="live-dot"></span>
 
-        <div class="breaking">
-            <small>09:41</small>
-            Darlık Barajı yüzde 62’ye geriledi
-        </div>
-
-        <div class="breaking">
-            <small>09:41</small>
-            Karadeniz açıklarında deprem
-        </div>
+        CANLI
 
     </div>
 
 
-    <!-- =========================
-         HEADER
-    ========================== -->
+    <div class="ticker-window">
 
-    <header class="header">
+        <div class="ticker-track">
 
-        <!-- LOGO -->
-        <div class="logo-area">
-            <img
-                class="site-logo"
-                src="images/silehaber.png"
-                alt="Şile Haber Merkezi"
+
+            <!-- 1. GRUP -->
+
+            <div class="ticker-group">
+
+                <div class="breaking">
+                    <small>09:41</small>
+                    <span>Şile Limanı’nda hamsi 180 liraya indi</span>
+                </div>
+
+                <div class="breaking">
+                    <small>10:12</small>
+                    <span>Ağva yolunda asfalt çalışması başladı</span>
+                </div>
+
+                <div class="breaking">
+                    <small>11:05</small>
+                    <span>Darlık Barajı yüzde 62’ye geriledi</span>
+                </div>
+
+                <div class="breaking">
+                    <small>12:18</small>
+                    <span>Karadeniz açıklarında deprem</span>
+                </div>
+
+                <div class="breaking">
+                    <small>13:02</small>
+                    <span>Şile sahillerinde yoğunluk arttı</span>
+                </div>
+
+            </div>
+
+
+            <!--
+                AYNI GRUBU TEKRAR EDİYORUZ.
+                Böylece kayan şeritte boşluk oluşmuyor.
+            -->
+
+            <div
+                class="ticker-group"
+                aria-hidden="true"
             >
-        </div>
 
-        <!-- HAVA / DENİZ -->
-        <div class="header-info">
+                <div class="breaking">
+                    <small>09:41</small>
+                    <span>Şile Limanı’nda hamsi 180 liraya indi</span>
+                </div>
 
-            <div class="weather">
+                <div class="breaking">
+                    <small>10:12</small>
+                    <span>Ağva yolunda asfalt çalışması başladı</span>
+                </div>
 
-                <i class="fa-solid fa-cloud-sun"></i>
+                <div class="breaking">
+                    <small>11:05</small>
+                    <span>Darlık Barajı yüzde 62’ye geriledi</span>
+                </div>
 
-                <div>
-                    <strong>22°</strong>
-                    <span>Parçalı Bulutlu</span>
-                    <small>Hissedilen 24°</small>
+                <div class="breaking">
+                    <small>12:18</small>
+                    <span>Karadeniz açıklarında deprem</span>
+                </div>
+
+                <div class="breaking">
+                    <small>13:02</small>
+                    <span>Şile sahillerinde yoğunluk arttı</span>
                 </div>
 
             </div>
 
-            <div class="sea">
-
-                <i class="fa-solid fa-water"></i>
-
-                <div>
-                    <p>Deniz <b>24°</b></p>
-                    <p>Dalga <b>1,2 m</b></p>
-                </div>
-
-            </div>
 
         </div>
 
+    </div>
 
-        <!-- SOSYAL MEDYA -->
-        <div class="social-header">
-
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-        </div>
-
-    </header>
+</div>
 
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
 
-    <nav class="navbar">
+<!-- ==================================================
+     HEADER
+================================================== -->
 
-        <a href="#" class="home">
-            <i class="fa-solid fa-house"></i>
-        </a>
-
-        <a href="#">GÜNDEM</a>
-        <a href="#">ŞİLE</a>
-        <a href="#">AĞVA</a>
-        <a href="#">BELEDİYE</a>
-        <a href="#">YAŞAM</a>
-        <a href="#">ULAŞIM</a>
-        <a href="#">DENİZ</a>
-        <a href="#">KÜLTÜR</a>
-        <a href="#">ARŞİV</a>
-
-        <a href="#" class="newsletter">
-            BÜLTENE KATIL
-            <i class="fa-regular fa-envelope"></i>
-        </a>
-
-    </nav>
+<header class="header">
 
 
-    <!-- =========================
-         ANA İÇERİK
-    ========================== -->
+    <!-- LOGO -->
 
-    <main class="container">
+    <a
+        href="#"
+        class="logo-area"
+        aria-label="Şile Haber Merkezi ana sayfa"
+    >
+
+        <img
+            class="site-logo"
+            src="images/silehaber.png"
+            alt="Şile Haber Merkezi"
+        >
+
+    </a>
 
 
-        <!-- =========================
-             ÜST BÖLÜM
-        ========================== -->
 
-        <section class="top-grid">
+    <!-- HAVA + DENİZ -->
+
+    <div class="header-info">
 
 
-            <!-- ANA HABER -->
+        <div class="weather">
 
-            <article class="main-news">
+            <i class="fa-solid fa-cloud-sun"></i>
 
-                <img
-                    src="images/sahil.jpeg"
-                    alt="Şile sahilleri"
-                >
+            <div>
 
-                <div class="overlay"></div>
+                <strong>22°</strong>
 
-                <span class="news-label">
-                    Gelişen Olay
+                <span>
+                    Parçalı Bulutlu
                 </span>
 
-                <div class="main-news-content">
+                <small>
+                    Hissedilen 24°
+                </small>
 
-                    <h2>
-                        Şile sahillerinde cankurtaran sayısı
-                        iki katına çıkarıldı
-                    </h2>
+            </div>
 
-                    <p>
-                        Ağustos ayındaki üç boğulma vakasının ardından
-                        Kumbaba, Uzunkum ve Sahilköy plajlarında görevli
-                        ekip sayısı 14’ten 28’e yükseltildi.
-                        Yeni kadro eylül sonuna kadar görevde kalacak.
-                    </p>
+        </div>
 
-                </div>
 
-                <div class="slider-buttons">
 
-                    <button aria-label="Önceki haber">
-                        ←
-                    </button>
+        <div class="sea">
 
-                    <button aria-label="Sonraki haber">
-                        →
-                    </button>
+            <i class="fa-solid fa-water"></i>
+
+            <div>
+
+                <p>
+                    Deniz
+                    <b>24°</b>
+                </p>
+
+                <p>
+                    Dalga
+                    <b>1,2 m</b>
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- SOSYAL MEDYA -->
+
+    <div class="social-header">
+
+        <a
+            href="#"
+            aria-label="Instagram"
+        >
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+            href="#"
+            aria-label="X"
+        >
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a
+            href="#"
+            aria-label="Facebook"
+        >
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a
+            href="#"
+            aria-label="YouTube"
+        >
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <button
+            class="search-button"
+            aria-label="Ara"
+        >
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+    </div>
+
+
+</header>
+
+
+
+<!-- ==================================================
+     NAVIGATION
+================================================== -->
+
+<nav class="navbar">
+
+
+    <a
+        href="#"
+        class="home"
+        aria-label="Ana sayfa"
+    >
+
+        <i class="fa-solid fa-house"></i>
+
+    </a>
+
+
+    <a href="#">GÜNDEM</a>
+
+    <a href="#">ŞİLE</a>
+
+    <a href="#">AĞVA</a>
+
+    <a href="#">BELEDİYE</a>
+
+    <a href="#">YAŞAM</a>
+
+    <a href="#">ULAŞIM</a>
+
+    <a href="#">DENİZ</a>
+
+    <a href="#">KÜLTÜR</a>
+
+    <a href="#">ARŞİV</a>
+
+
+    <a
+        href="#"
+        class="newsletter"
+    >
+
+        BÜLTENE KATIL
+
+        <i class="fa-regular fa-envelope"></i>
+
+    </a>
+
+
+</nav>
+
+
+
+<!-- ==================================================
+     ANA İÇERİK
+================================================== -->
+
+<main class="container">
+
+
+    <!-- ==================================================
+         ÜST BÖLÜM
+    ================================================== -->
+
+    <section class="top-grid">
+
+
+        <!-- ANA HABER -->
+
+        <article class="main-news">
+
+
+            <img
+                src="images/sahil.jpeg"
+                alt="Şile sahilleri"
+            >
+
+
+            <div class="overlay"></div>
+
+
+            <span class="news-label">
+                Gelişen Olay
+            </span>
+
+
+            <div class="main-news-content">
+
+                <h1>
+                    Şile sahillerinde cankurtaran sayısı
+                    iki katına çıkarıldı
+                </h1>
+
+                <p>
+                    Ağustos ayındaki üç boğulma vakasının ardından
+                    Kumbaba, Uzunkum ve Sahilköy plajlarında görevli
+                    ekip sayısı 14’ten 28’e yükseltildi.
+                    Yeni kadro eylül sonuna kadar görevde kalacak.
+                </p>
+
+            </div>
+
+
+            <div class="slider-buttons">
+
+                <button
+                    type="button"
+                    aria-label="Önceki haber"
+                >
+                    ←
+                </button>
+
+                <button
+                    type="button"
+                    aria-label="Sonraki haber"
+                >
+                    →
+                </button>
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- ==================================================
+             ŞİLE'DE BUGÜN
+        ================================================== -->
+
+        <section class="today-box">
+
+
+            <div class="box-title">
+
+                <h2>
+                    ŞİLE’DE BUGÜN
+                </h2>
+
+            </div>
+
+
+
+            <article class="today-news">
+
+                <img
+                    src="images/baraj.jpeg"
+                    alt="Darlık Barajı"
+                >
+
+                <div>
+
+                    <h3>
+                        Darlık Barajı doluluk oranı
+                        yüzde 62’ye geriledi
+                    </h3>
+
+                    <small>
+                        1 saat önce
+                    </small>
 
                 </div>
 
             </article>
 
 
-            <!-- =========================
-                 ŞİLE'DE BUGÜN
-            ========================== -->
 
-            <section class="today-box">
+            <article class="today-news">
 
-                <div class="box-title">
-                    <h2>ŞİLE’DE BUGÜN</h2>
-                </div>
+                <img
+                    src="images/agva.jpeg"
+                    alt="Ağva yolu"
+                >
 
+                <div>
 
-                <article class="today-news">
+                    <h3>
+                        Ağva-Şile yolunda asfalt çalışması;
+                        iki hafta tek şerit
+                    </h3>
 
-                    <img
-                        src="images/baraj.jpeg"
-                        alt="Darlık Barajı"
-                    >
-
-                    <div>
-
-                        <h3>
-                            Darlık Barajı doluluk oranı
-                            yüzde 62’ye geriledi
-                        </h3>
-
-                        <small>1 saat önce</small>
-
-                    </div>
-
-                </article>
-
-
-                <article class="today-news">
-
-                    <img
-                        src="images/agva.jpeg"
-                        alt="Ağva yolu"
-                    >
-
-                    <div>
-
-                        <h3>
-                            Ağva-Şile yolunda asfalt çalışması;
-                            iki hafta tek şerit
-                        </h3>
-
-                        <small>3 saat önce</small>
-
-                    </div>
-
-                </article>
-
-
-                <article class="today-news">
-
-                    <img
-                        src="images/kumbaba.jpeg"
-                        alt="Kumbaba"
-                    >
-
-                    <div>
-
-                        <h3>
-                            Kumbaba’da otopark ücretleri
-                            yeniden düzenlendi
-                        </h3>
-
-                        <small>5 saat önce</small>
-
-                    </div>
-
-                </article>
-
-
-                <article class="today-news">
-
-                    <img
-                        src="images/plaj.jpeg"
-                        alt="Uzunkum Plajı"
-                    >
-
-                    <div>
-
-                        <h3>
-                            Uzunkum Plajı’na “Mavi Bayrak”
-                            yeniden verildi
-                        </h3>
-
-                        <small>Dün 17:40</small>
-
-                    </div>
-
-                </article>
-
-
-                <a href="#" class="all-news">
-                    Tüm Haberler →
-                </a>
-
-            </section>
-
-
-            <!-- =========================
-                 ŞİMDİ ŞİLE'DE
-            ========================== -->
-
-            <section class="status-box">
-
-                <div class="box-title">
-                    <h2>ŞİMDİ ŞİLE’DE</h2>
-                </div>
-
-
-                <div class="status-item">
-
-                    <i class="fa-solid fa-water"></i>
-
-                    <div>
-                        <b>Darlık Barajı</b>
-                        <small>Doluluk Oranı</small>
-                    </div>
-
-                    <strong>62%</strong>
+                    <small>
+                        3 saat önce
+                    </small>
 
                 </div>
 
-
-                <div class="status-item">
-
-                    <i class="fa-solid fa-temperature-half"></i>
-
-                    <div>
-                        <b>Deniz Suyu</b>
-                        <small>Sıcaklığı</small>
-                    </div>
-
-                    <strong>24°</strong>
-
-                </div>
+            </article>
 
 
-                <div class="status-item">
 
-                    <i class="fa-solid fa-water"></i>
+            <article class="today-news">
 
-                    <div>
-                        <b>Dalga Yüksekliği</b>
-                    </div>
+                <img
+                    src="images/kumbaba.jpeg"
+                    alt="Kumbaba"
+                >
 
-                    <strong>1,2m</strong>
+                <div>
+
+                    <h3>
+                        Kumbaba’da otopark ücretleri
+                        yeniden düzenlendi
+                    </h3>
+
+                    <small>
+                        5 saat önce
+                    </small>
 
                 </div>
 
-
-                <div class="status-item">
-
-                    <i class="fa-solid fa-cloud"></i>
-
-                    <div>
-                        <b>Hava Durumu</b>
-                        <small>Parçalı Bulutlu</small>
-                    </div>
-
-                    <strong>22°</strong>
-
-                </div>
+            </article>
 
 
-                <div class="status-item">
 
-                    <i class="fa-solid fa-prescription-bottle-medical"></i>
+            <article class="today-news">
 
-                    <div>
-                        <b>Nöbetçi Eczane</b>
-                        <small>Deniz Eczanesi</small>
-                    </div>
+                <img
+                    src="images/plaj.jpeg"
+                    alt="Uzunkum Plajı"
+                >
+
+                <div>
+
+                    <h3>
+                        Uzunkum Plajı’na “Mavi Bayrak”
+                        yeniden verildi
+                    </h3>
+
+                    <small>
+                        Dün 17:40
+                    </small>
 
                 </div>
 
-
-                <div class="status-item">
-
-                    <i class="fa-solid fa-ship"></i>
-
-                    <div>
-                        <b>Vapur Seferleri</b>
-                        <small>Şile İskelesi</small>
-                    </div>
-
-                    <strong class="green">
-                        Normal
-                    </strong>
-
-                </div>
+            </article>
 
 
-                <div class="status-item">
 
-                    <i class="fa-solid fa-bolt"></i>
+            <a
+                href="#"
+                class="all-news"
+            >
+                Tüm Haberler →
+            </a>
 
-                    <div>
-                        <b>Elektrik Kesintisi</b>
-                        <small>Planlı, 48 saat içinde</small>
-                    </div>
-
-                    <strong class="green">
-                        Yok
-                    </strong>
-
-                </div>
-
-
-                <div class="status-item">
-
-                    <i class="fa-solid fa-dollar-sign"></i>
-
-                    <div>
-                        <b>Dolar</b>
-                        <small>Merkez Bankası Satış</small>
-                    </div>
-
-                    <strong>48,26</strong>
-
-                </div>
-
-
-                <button class="data-button">
-                    Tüm verileri göster →
-                </button>
-
-            </section>
 
         </section>
 
 
-        <!-- =========================
-             ÖNE ÇIKANLAR + SON DEPREMLER
-        ========================== -->
 
-        <section class="featured-row">
+        <!-- ==================================================
+             ŞİMDİ ŞİLE'DE
+        ================================================== -->
 
-
-            <!-- ÖNE ÇIKANLAR -->
-
-            <section class="featured-section">
-
-                <div class="section-title">
-
-                    <h2>ÖNE ÇIKANLAR</h2>
-
-                    <a href="#">
-                        Tümünü Gör →
-                    </a>
-
-                </div>
+        <section class="status-box">
 
 
-                <div class="featured-grid">
+            <div class="box-title">
+
+                <h2>
+                    ŞİMDİ ŞİLE’DE
+                </h2>
+
+            </div>
 
 
-                    <article class="featured-card">
 
-                        <div class="image-wrapper">
+            <div class="status-item">
 
-                            <img
-                                src="images/hamsi.jpeg"
-                                alt="Şile Limanı"
-                            >
+                <i class="fa-solid fa-water"></i>
 
-                            <span>ŞİLE</span>
+                <div>
 
-                        </div>
+                    <b>Darlık Barajı</b>
 
-                        <h3>
-                            Şile Limanı’nda hamsi
-                            tezgah fiyatı 180 liraya indi
-                        </h3>
-
-                        <small>1 saat önce</small>
-
-                    </article>
-
-
-                    <article class="featured-card">
-
-                        <div class="image-wrapper">
-
-                            <img
-                                src="images/ayazma.jpeg"
-                                alt="Ayazma Plajı"
-                            >
-
-                            <span>YAŞAM</span>
-
-                        </div>
-
-                        <h3>
-                            Ayazma Plajı’nda yaz
-                            yoğunluğu devam ediyor
-                        </h3>
-
-                        <small>2 saat önce</small>
-
-                    </article>
-
-
-                    <article class="featured-card">
-
-                        <div class="image-wrapper">
-
-                            <img
-                                src="images/fener.jpeg"
-                                alt="Şile Feneri"
-                            >
-
-                            <span>KÜLTÜR</span>
-
-                        </div>
-
-                        <h3>
-                            Şile Feneri gün batımında
-                            büyüledi
-                        </h3>
-
-                        <small>5 saat önce</small>
-
-                    </article>
+                    <small>
+                        Doluluk Oranı
+                    </small>
 
                 </div>
 
-            </section>
+                <strong>
+                    62%
+                </strong>
+
+            </div>
 
 
-            <!-- =========================
-                 SON DEPREMLER
-            ========================== -->
 
-            <aside class="earthquake">
+            <div class="status-item">
 
-                <div class="section-title">
-                    <h2>SON DEPREMLER</h2>
-                </div>
+                <i class="fa-solid fa-temperature-half"></i>
 
+                <div>
 
-                <div class="quake">
+                    <b>Deniz Suyu</b>
 
-                    <strong>2,4</strong>
-
-                    <div>
-
-                        <b>Karadeniz açıkları</b>
-
-                        <small>
-                            Bugün 04:12 - 7 km derinlik
-                        </small>
-
-                    </div>
+                    <small>
+                        Sıcaklığı
+                    </small>
 
                 </div>
 
+                <strong>
+                    24°
+                </strong>
 
-                <div class="quake">
-
-                    <strong>1,9</strong>
-
-                    <div>
-
-                        <b>Kandıra, Kocaeli</b>
-
-                        <small>
-                            Dün 22:47 - 11 km derinlik
-                        </small>
-
-                    </div>
-
-                </div>
+            </div>
 
 
-                <div class="quake">
 
-                    <strong>2,1</strong>
+            <div class="status-item">
 
-                    <div>
+                <i class="fa-solid fa-water"></i>
 
-                        <b>Marmara Denizi</b>
+                <div>
 
-                        <small>
-                            Dün 18:33 - 9 km derinlik
-                        </small>
-
-                    </div>
+                    <b>
+                        Dalga Yüksekliği
+                    </b>
 
                 </div>
 
+                <strong>
+                    1,2m
+                </strong>
 
-                <button>
-                    Tüm depremler →
-                </button>
+            </div>
 
-            </aside>
+
+
+            <div class="status-item">
+
+                <i class="fa-solid fa-cloud"></i>
+
+                <div>
+
+                    <b>
+                        Hava Durumu
+                    </b>
+
+                    <small>
+                        Parçalı Bulutlu
+                    </small>
+
+                </div>
+
+                <strong>
+                    22°
+                </strong>
+
+            </div>
+
+
+
+            <div class="status-item">
+
+                <i class="fa-solid fa-prescription-bottle-medical"></i>
+
+                <div>
+
+                    <b>
+                        Nöbetçi Eczane
+                    </b>
+
+                    <small>
+                        Deniz Eczanesi
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="status-item">
+
+                <i class="fa-solid fa-ship"></i>
+
+                <div>
+
+                    <b>
+                        Vapur Seferleri
+                    </b>
+
+                    <small>
+                        Şile İskelesi
+                    </small>
+
+                </div>
+
+                <strong class="green">
+                    Normal
+                </strong>
+
+            </div>
+
+
+
+            <div class="status-item">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <div>
+
+                    <b>
+                        Elektrik Kesintisi
+                    </b>
+
+                    <small>
+                        Planlı, 48 saat içinde
+                    </small>
+
+                </div>
+
+                <strong class="green">
+                    Yok
+                </strong>
+
+            </div>
+
+
+
+            <div class="status-item">
+
+                <i class="fa-solid fa-dollar-sign"></i>
+
+                <div>
+
+                    <b>Dolar</b>
+
+                    <small>
+                        Merkez Bankası Satış
+                    </small>
+
+                </div>
+
+                <strong>
+                    48,26
+                </strong>
+
+            </div>
+
+
+
+            <button
+                type="button"
+                class="data-button"
+            >
+                Tüm verileri göster →
+            </button>
+
 
         </section>
 
 
-        <!-- =========================
-             ŞİLE'DEN HABERLER
-        ========================== -->
+    </section>
 
-        <section class="news-section">
+
+
+    <!-- ==================================================
+         ÖNE ÇIKANLAR + SON DEPREMLER
+    ================================================== -->
+
+    <section class="featured-row">
+
+
+        <!-- ÖNE ÇIKANLAR -->
+
+        <section class="featured-section">
+
 
             <div class="section-title">
 
-                <h2>ŞİLE’DEN HABERLER</h2>
+                <h2>
+                    ÖNE ÇIKANLAR
+                </h2>
 
                 <a href="#">
                     Tümünü Gör →
@@ -628,416 +752,783 @@
             </div>
 
 
-            <div class="categories">
 
-                <a href="#" class="active">Tümü</a>
-                <a href="#">Şile</a>
-                <a href="#">Ağva</a>
-                <a href="#">Belediye</a>
-                <a href="#">Yaşam</a>
-                <a href="#">Ulaşım</a>
-                <a href="#">Deniz</a>
-                <a href="#">Kültür</a>
-
-            </div>
+            <div class="featured-grid">
 
 
-            <div class="news-grid">
+                <article class="featured-card">
 
 
-                <article class="news-card">
+                    <div class="image-wrapper">
 
-                    <img
-                        src="images/fener.jpeg"
-                        alt="Kefken açıkları"
-                    >
+                        <img
+                            src="images/hamsi.jpeg"
+                            alt="Şile Limanı"
+                        >
 
-                    <h3>
-                        Kefken açıklarında
-                        denetimler artırıldı
-                    </h3>
-
-                    <small>8 saat önce</small>
-
-                </article>
-
-
-                <article class="news-card">
-
-                    <img
-                        src="images/agva2.jpeg"
-                        alt="Ağva çevre temizliği"
-                    >
-
-                    <h3>
-                        Ağva’da çevre temizliği
-                        gerçekleştirildi
-                    </h3>
-
-                    <small>Dün 21:15</small>
-
-                </article>
-
-
-                <article class="news-card">
-
-                    <img
-                        src="images/belediye.jpeg"
-                        alt="Şile Belediyesi"
-                    >
-
-                    <h3>
-                        Şile Belediyesi’nden
-                        öğrencilere ulaşım desteği
-                    </h3>
-
-                    <small>Dün 17:30</small>
-
-                </article>
-
-
-                <article class="news-card">
-
-                    <img
-                        src="images/park.jpeg"
-                        alt="Çocuk parkı"
-                    >
-
-                    <h3>
-                        Yeni çocuk parkı
-                        Sahilköy’de açıldı
-                    </h3>
-
-                    <small>Dün 15:10</small>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             GÖRÜNTÜLER + SOSYAL MEDYA
-        ========================== -->
-
-        <section class="middle-grid">
-
-
-            <!-- ŞİLE'DEN GÖRÜNTÜLER -->
-
-            <section class="gallery">
-
-                <div class="section-title">
-
-                    <h2>ŞİLE’DEN GÖRÜNTÜLER</h2>
-
-                    <a href="#">
-                        Tüm Videolar →
-                    </a>
-
-                </div>
-
-
-                <div class="gallery-content">
-
-                    <img
-                        class="big-image"
-                        src="images/sahil.jpeg"
-                        alt="Şile sahili"
-                    >
-
-
-                    <div class="small-images">
-
-
-                        <div>
-
-                            <img
-                                src="images/agva2.jpeg"
-                                alt="Ağva Deresi"
-                            >
-
-                            <span>
-                                Ağva Deresi’nde sabah manzarası
-                            </span>
-
-                        </div>
-
-
-                        <div>
-
-                            <img
-                                src="images/kumbaba.jpeg"
-                                alt="Kumbaba"
-                            >
-
-                            <span>
-                                Kumbaba’da gün doğumu
-                            </span>
-
-                        </div>
-
-
-                        <div>
-
-                            <img
-                                src="images/fener.jpeg"
-                                alt="Şile manzarası"
-                            >
-
-                            <span>
-                                Fener’den Şile manzarası
-                            </span>
-
-                        </div>
+                        <span>
+                            ŞİLE
+                        </span>
 
                     </div>
 
-                </div>
 
-            </section>
-
-
-            <!-- =========================
-                 SOSYAL MEDYA
-            ========================== -->
-
-            <section class="social">
-
-                <div class="section-title">
-
-                    <h2>SOSYAL’DE ŞİLE</h2>
-
-                    <a href="#">
-                        Tümünü Gör →
-                    </a>
-
-                </div>
+                    <h3>
+                        Şile Limanı’nda hamsi
+                        tezgah fiyatı 180 liraya indi
+                    </h3>
 
 
-                <div class="social-grid">
+                    <small>
+                        1 saat önce
+                    </small>
 
 
-                    <article>
-
-                        <b>
-                            <i class="fa-brands fa-instagram"></i>
-                            @silehabermrkz
-                        </b>
-
-                        <hr>
-
-                        <p>
-                            Uzunkum’da gün batımı harikaydı.
-                        </p>
-
-                        <small>
-                            ♡ 128　💬 8
-                        </small>
-
-                    </article>
+                </article>
 
 
-                    <article>
 
-                        <b>
-                            <i class="fa-brands fa-x-twitter"></i>
-                            @silehabermrkz
-                        </b>
-
-                        <hr>
-
-                        <p>
-                            Ağva yolunda asfalt çalışmaları devam ediyor.
-                        </p>
-
-                        <small>
-                            ♡ 64　💬 5
-                        </small>
-
-                    </article>
+                <article class="featured-card">
 
 
-                    <article>
+                    <div class="image-wrapper">
 
-                        <b>
-                            <i class="fa-brands fa-facebook"></i>
-                            Şile Haber Merkezi
-                        </b>
+                        <img
+                            src="images/ayazma.jpeg"
+                            alt="Ayazma Plajı"
+                        >
 
-                        <hr>
+                        <span>
+                            YAŞAM
+                        </span>
 
-                        <p>
-                            Darlık Barajı doluluk oranı %62’ye geriledi.
-                        </p>
+                    </div>
 
-                        <small>
-                            ♡ 92　💬 3
-                        </small>
 
-                    </article>
+                    <h3>
+                        Ayazma Plajı’nda yaz
+                        yoğunluğu devam ediyor
+                    </h3>
 
-                </div>
 
-            </section>
+                    <small>
+                        2 saat önce
+                    </small>
+
+
+                </article>
+
+
+
+                <article class="featured-card">
+
+
+                    <div class="image-wrapper">
+
+                        <img
+                            src="images/fener.jpeg"
+                            alt="Şile Feneri"
+                        >
+
+                        <span>
+                            KÜLTÜR
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Şile Feneri gün batımında
+                        büyüledi
+                    </h3>
+
+
+                    <small>
+                        5 saat önce
+                    </small>
+
+
+                </article>
+
+
+            </div>
+
 
         </section>
 
 
-        <!-- =========================
-             TANITIM KARTLARI
-        ========================== -->
 
-        <section class="promo-grid">
+        <!-- ==================================================
+             SON DEPREMLER
+        ================================================== -->
 
-
-            <a href="#" class="promo-card">
-
-                <i class="fa-solid fa-file-lines"></i>
-
-                <div>
-
-                    <h3>HAFTANIN DOSYASI</h3>
-
-                    <p>
-                        Şile’de turizmin geleceği masaya yatırıldı
-                    </p>
-
-                </div>
-
-                <span>→</span>
-
-            </a>
+        <aside class="earthquake">
 
 
-            <a href="#" class="promo-card">
+            <div class="section-title">
 
-                <i class="fa-solid fa-map-location-dot"></i>
+                <h2>
+                    SON DEPREMLER
+                </h2>
+
+            </div>
+
+
+
+            <div class="quake">
+
+                <strong>
+                    2,4
+                </strong>
 
                 <div>
 
-                    <h3>ŞİLE REHBERİ</h3>
+                    <b>
+                        Karadeniz açıkları
+                    </b>
 
-                    <p>
-                        Plajlar, koylar, restoranlar ve daha fazlası
-                    </p>
+                    <small>
+                        Bugün 04:12 - 7 km derinlik
+                    </small>
 
                 </div>
 
-                <span>→</span>
-
-            </a>
+            </div>
 
 
-            <a href="#" class="promo-card">
 
-                <i class="fa-solid fa-camera"></i>
+            <div class="quake">
+
+                <strong>
+                    1,9
+                </strong>
 
                 <div>
 
-                    <h3>FOTO GALERİ</h3>
+                    <b>
+                        Kandıra, Kocaeli
+                    </b>
 
-                    <p>
-                        Şile’nin en güzel kareleri
-                    </p>
+                    <small>
+                        Dün 22:47 - 11 km derinlik
+                    </small>
 
                 </div>
 
-                <span>→</span>
+            </div>
 
+
+
+            <div class="quake">
+
+                <strong>
+                    2,1
+                </strong>
+
+                <div>
+
+                    <b>
+                        Marmara Denizi
+                    </b>
+
+                    <small>
+                        Dün 18:33 - 9 km derinlik
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <button type="button">
+                Tüm depremler →
+            </button>
+
+
+        </aside>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         ŞİLE'DEN HABERLER
+    ================================================== -->
+
+    <section class="news-section">
+
+
+        <div class="section-title">
+
+            <h2>
+                ŞİLE’DEN HABERLER
+            </h2>
+
+            <a href="#">
+                Tümünü Gör →
             </a>
+
+        </div>
+
+
+
+        <div class="categories">
+
+            <a
+                href="#"
+                class="active"
+            >
+                Tümü
+            </a>
+
+            <a href="#">
+                Şile
+            </a>
+
+            <a href="#">
+                Ağva
+            </a>
+
+            <a href="#">
+                Belediye
+            </a>
+
+            <a href="#">
+                Yaşam
+            </a>
+
+            <a href="#">
+                Ulaşım
+            </a>
+
+            <a href="#">
+                Deniz
+            </a>
+
+            <a href="#">
+                Kültür
+            </a>
+
+        </div>
+
+
+
+        <div class="news-grid">
+
+
+            <article class="news-card">
+
+                <img
+                    src="images/fener.jpeg"
+                    alt="Kefken açıkları"
+                >
+
+                <h3>
+                    Kefken açıklarında
+                    denetimler artırıldı
+                </h3>
+
+                <small>
+                    8 saat önce
+                </small>
+
+            </article>
+
+
+
+            <article class="news-card">
+
+                <img
+                    src="images/agva2.jpeg"
+                    alt="Ağva çevre temizliği"
+                >
+
+                <h3>
+                    Ağva’da çevre temizliği
+                    gerçekleştirildi
+                </h3>
+
+                <small>
+                    Dün 21:15
+                </small>
+
+            </article>
+
+
+
+            <article class="news-card">
+
+                <img
+                    src="images/belediye.jpeg"
+                    alt="Şile Belediyesi"
+                >
+
+                <h3>
+                    Şile Belediyesi’nden
+                    öğrencilere ulaşım desteği
+                </h3>
+
+                <small>
+                    Dün 17:30
+                </small>
+
+            </article>
+
+
+
+            <article class="news-card">
+
+                <img
+                    src="images/park.jpeg"
+                    alt="Çocuk parkı"
+                >
+
+                <h3>
+                    Yeni çocuk parkı
+                    Sahilköy’de açıldı
+                </h3>
+
+                <small>
+                    Dün 15:10
+                </small>
+
+            </article>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         GÖRÜNTÜLER + SOSYAL
+    ================================================== -->
+
+    <section class="middle-grid">
+
+
+        <!-- GÖRÜNTÜLER -->
+
+        <section class="gallery">
+
+
+            <div class="section-title">
+
+                <h2>
+                    ŞİLE’DEN GÖRÜNTÜLER
+                </h2>
+
+                <a href="#">
+                    Tüm Videolar →
+                </a>
+
+            </div>
+
+
+
+            <div class="gallery-content">
+
+
+                <img
+                    class="big-image"
+                    src="images/sahil.jpeg"
+                    alt="Şile sahili"
+                >
+
+
+
+                <div class="small-images">
+
+
+                    <div>
+
+                        <img
+                            src="images/agva2.jpeg"
+                            alt="Ağva Deresi"
+                        >
+
+                        <span>
+                            Ağva Deresi’nde sabah manzarası
+                        </span>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <img
+                            src="images/kumbaba.jpeg"
+                            alt="Kumbaba"
+                        >
+
+                        <span>
+                            Kumbaba’da gün doğumu
+                        </span>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <img
+                            src="images/fener.jpeg"
+                            alt="Şile manzarası"
+                        >
+
+                        <span>
+                            Fener’den Şile manzarası
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
 
         </section>
 
-    </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+        <!-- ==================================================
+             SOSYAL MEDYA
+        ================================================== -->
 
-    <footer>
-
-
-        <div class="footer-brand">
-
-            <h3>Şile Haber Merkezi</h3>
-
-            <p>
-                Şile’nin nabzı burada atıyor.
-            </p>
-
-        </div>
+        <section class="social">
 
 
-        <div>
+            <div class="section-title">
 
-            <h3>Kurumsal</h3>
+                <h2>
+                    SOSYAL’DE ŞİLE
+                </h2>
 
-            <a href="#">Hakkımızda</a>
-            <a href="#">Ekibimiz</a>
-            <a href="#">İletişim</a>
-            <a href="#">Künye</a>
+                <a href="#">
+                    Tümünü Gör →
+                </a>
 
-        </div>
-
-
-        <div>
-
-            <h3>Kategoriler</h3>
-
-            <a href="#">Gündem</a>
-            <a href="#">Yaşam</a>
-            <a href="#">Deniz</a>
-            <a href="#">Belediye</a>
-
-        </div>
+            </div>
 
 
-        <div class="footer-social">
 
-            <h3>BİZİ TAKİP EDİN</h3>
+            <div class="social-grid">
+
+
+                <article>
+
+                    <b>
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                        @silehabermrkz
+
+                    </b>
+
+                    <hr>
+
+                    <p>
+                        Uzunkum’da gün batımı harikaydı.
+                    </p>
+
+                    <small>
+                        ♡ 128　💬 8
+                    </small>
+
+                </article>
+
+
+
+                <article>
+
+                    <b>
+
+                        <i class="fa-brands fa-x-twitter"></i>
+
+                        @silehabermrkz
+
+                    </b>
+
+                    <hr>
+
+                    <p>
+                        Ağva yolunda asfalt çalışmaları devam ediyor.
+                    </p>
+
+                    <small>
+                        ♡ 64　💬 5
+                    </small>
+
+                </article>
+
+
+
+                <article>
+
+                    <b>
+
+                        <i class="fa-brands fa-facebook"></i>
+
+                        Şile Haber Merkezi
+
+                    </b>
+
+                    <hr>
+
+                    <p>
+                        Darlık Barajı doluluk oranı %62’ye geriledi.
+                    </p>
+
+                    <small>
+                        ♡ 92　💬 3
+                    </small>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         TANITIM KARTLARI
+    ================================================== -->
+
+    <section class="promo-grid">
+
+
+        <a
+            href="#"
+            class="promo-card"
+        >
+
+            <i class="fa-solid fa-file-lines"></i>
 
             <div>
 
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-x-twitter"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-youtube"></i>
+                <h3>
+                    HAFTANIN DOSYASI
+                </h3>
+
+                <p>
+                    Şile’de turizmin geleceği masaya yatırıldı
+                </p>
 
             </div>
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="#"
+            class="promo-card"
+        >
+
+            <i class="fa-solid fa-map-location-dot"></i>
+
+            <div>
+
+                <h3>
+                    ŞİLE REHBERİ
+                </h3>
+
+                <p>
+                    Plajlar, koylar, restoranlar ve daha fazlası
+                </p>
+
+            </div>
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="#"
+            class="promo-card"
+        >
+
+            <i class="fa-solid fa-camera"></i>
+
+            <div>
+
+                <h3>
+                    FOTO GALERİ
+                </h3>
+
+                <p>
+                    Şile’nin en güzel kareleri
+                </p>
+
+            </div>
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+
+    <div class="footer-brand">
+
+        <h3>
+            Şile Haber Merkezi
+        </h3>
+
+        <p>
+            Şile’nin nabzı burada atıyor.
+        </p>
+
+    </div>
+
+
+
+    <div>
+
+        <h3>
+            Kurumsal
+        </h3>
+
+        <a href="#">
+            Hakkımızda
+        </a>
+
+        <a href="#">
+            Ekibimiz
+        </a>
+
+        <a href="#">
+            İletişim
+        </a>
+
+        <a href="#">
+            Künye
+        </a>
+
+    </div>
+
+
+
+    <div>
+
+        <h3>
+            Kategoriler
+        </h3>
+
+        <a href="#">
+            Gündem
+        </a>
+
+        <a href="#">
+            Yaşam
+        </a>
+
+        <a href="#">
+            Deniz
+        </a>
+
+        <a href="#">
+            Belediye
+        </a>
+
+    </div>
+
+
+
+    <div class="footer-social">
+
+        <h3>
+            BİZİ TAKİP EDİN
+        </h3>
+
+        <div>
+
+            <i class="fa-brands fa-instagram"></i>
+
+            <i class="fa-brands fa-x-twitter"></i>
+
+            <i class="fa-brands fa-facebook"></i>
+
+            <i class="fa-brands fa-youtube"></i>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="subscribe">
+
+        <h3>
+            BÜLTENE KATILIN
+        </h3>
+
+        <p>
+            Şile’den haberiniz olsun
+        </p>
+
+
+        <div class="subscribe-form">
+
+            <input
+                type="email"
+                placeholder="E-posta adresiniz"
+                aria-label="E-posta adresiniz"
+            >
+
+            <button
+                type="button"
+                aria-label="Abone ol"
+            >
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
 
         </div>
 
 
-        <div class="subscribe">
-
-            <h3>BÜLTENE KATILIN</h3>
-
-            <p>
-                Şile’den haberiniz olsun
-            </p>
+    </div>
 
 
-            <div class="subscribe-form">
+</footer>
 
-                <input
-                    type="email"
-                    placeholder="E-posta adresiniz"
-                >
-
-                <button aria-label="Abone ol">
-
-                    <i class="fa-solid fa-paper-plane"></i>
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </footer>
 
 </body>
+
 </html>
