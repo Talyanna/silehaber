@@ -8,6 +8,7 @@
     box-sizing: border-box;
 }
 
+
 :root {
     --navy: #063b75;
     --dark-blue: #052f63;
@@ -20,9 +21,11 @@
     --red: #ef3d35;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     font-family: "Roboto", sans-serif;
@@ -30,20 +33,24 @@ body {
     background: #ffffff;
 }
 
+
 img {
     display: block;
     max-width: 100%;
 }
+
 
 a {
     color: inherit;
     text-decoration: none;
 }
 
+
 button,
 input {
     font-family: inherit;
 }
+
 
 
 /* ==================================================
@@ -53,10 +60,9 @@ input {
 .live-bar {
     width: 100%;
     height: 62px;
-    min-height: 62px;
 
     display: flex;
-    align-items: center;
+    align-items: stretch;
 
     overflow: hidden;
 
@@ -65,18 +71,17 @@ input {
 }
 
 
-/* CANLI SABİT ALAN */
+/* CANLI kısmı sabit */
 
 .live-label {
     position: relative;
-    z-index: 10;
+    z-index: 5;
 
     height: 62px;
-    min-width: 110px;
-
-    padding: 0 26px;
 
     flex-shrink: 0;
+
+    padding: 0 26px;
 
     display: flex;
     align-items: center;
@@ -84,12 +89,12 @@ input {
 
     background: var(--red);
 
-    color: #ffffff;
-
     font-size: 17px;
     font-weight: 900;
+
     letter-spacing: 0.3px;
 }
+
 
 .live-dot {
     width: 10px;
@@ -97,14 +102,13 @@ input {
 
     margin-right: 9px;
 
-    flex-shrink: 0;
-
     border-radius: 50%;
 
     background: #ffffff;
 
     animation: livePulse 1.2s ease-in-out infinite;
 }
+
 
 @keyframes livePulse {
 
@@ -118,89 +122,72 @@ input {
         opacity: 0.45;
         transform: scale(0.75);
     }
+
 }
 
 
-/* KAYAN HABER ALANI */
+/* Kayan alan */
 
 .ticker-window {
-    height: 62px;
-
     min-width: 0;
+
     flex: 1;
 
-    position: relative;
-
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
 }
 
-.ticker-track {
-    height: 62px;
 
+.ticker-track {
     width: max-content;
 
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     align-items: center;
-
-    white-space: nowrap;
 
     animation: tickerMove 38s linear infinite;
 
     will-change: transform;
 }
 
-.ticker-group {
-    height: 62px;
 
+.ticker-group {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     align-items: center;
 
     flex-shrink: 0;
-
-    white-space: nowrap;
 }
+
 
 .breaking {
     height: 62px;
 
-    padding: 0 30px;
-
     flex-shrink: 0;
 
+    padding: 0 30px;
+
     display: flex;
-    flex-direction: row;
     align-items: center;
 
     white-space: nowrap;
 
     border-right: 1px solid rgba(255, 255, 255, 0.18);
 
-    color: #ffffff;
-
     font-size: 14px;
     font-weight: 500;
 }
 
+
 .breaking small {
     margin-right: 9px;
-
-    flex-shrink: 0;
 
     color: #9bc7e8;
 
     font-size: 12px;
     font-weight: 700;
-
-    white-space: nowrap;
 }
 
-.breaking span {
-    white-space: nowrap;
-}
 
 @keyframes tickerMove {
 
@@ -211,11 +198,16 @@ input {
     to {
         transform: translateX(-50%);
     }
+
 }
+
+
+/* Fare üstüne gelince durur */
 
 .ticker-window:hover .ticker-track {
     animation-play-state: paused;
 }
+
 
 
 /* ==================================================
@@ -238,6 +230,7 @@ input {
 }
 
 
+
 /* ==================================================
    LOGO
 ================================================== */
@@ -249,6 +242,7 @@ input {
     flex-shrink: 0;
 }
 
+
 .site-logo {
     width: clamp(170px, 18vw, 245px);
     height: auto;
@@ -257,6 +251,7 @@ input {
 
     object-fit: contain;
 }
+
 
 
 /* ==================================================
@@ -269,6 +264,7 @@ input {
     display: flex;
     align-items: center;
 }
+
 
 .weather,
 .sea {
@@ -284,11 +280,14 @@ input {
     border-right: 1px solid #dddddd;
 }
 
+
 .weather > i,
 .sea > i {
     color: #4a9cdb;
+
     font-size: 38px;
 }
+
 
 .weather strong {
     display: block;
@@ -298,6 +297,7 @@ input {
     font-size: 34px;
 }
 
+
 .weather span {
     display: block;
 
@@ -306,9 +306,11 @@ input {
     font-size: 15px;
 }
 
+
 .weather small {
     color: #999999;
 }
+
 
 .sea p {
     color: #777777;
@@ -316,11 +318,13 @@ input {
     font-size: 15px;
 }
 
+
 .sea b {
     color: var(--navy);
 
     font-size: 20px;
 }
+
 
 
 /* ==================================================
@@ -338,15 +342,18 @@ input {
     font-size: 23px;
 }
 
+
 .social-header a {
     transition: 0.2s ease;
 }
+
 
 .social-header a:hover {
     color: var(--blue);
 
     transform: translateY(-2px);
 }
+
 
 .search-button {
     padding: 0;
@@ -361,6 +368,7 @@ input {
 
     font-size: 22px;
 }
+
 
 
 /* ==================================================
@@ -390,6 +398,7 @@ input {
         );
 }
 
+
 .navbar a {
     flex-shrink: 0;
 
@@ -403,9 +412,11 @@ input {
     transition: 0.2s ease;
 }
 
+
 .navbar a:hover {
     background: rgba(255, 255, 255, 0.1);
 }
+
 
 .navbar .home {
     width: 75px;
@@ -418,6 +429,7 @@ input {
     font-size: 22px;
 }
 
+
 .navbar .newsletter {
     margin-left: auto;
     margin-right: 5px;
@@ -426,6 +438,7 @@ input {
 
     background: var(--dark-blue);
 }
+
 
 
 /* ==================================================
@@ -438,6 +451,7 @@ input {
 
     margin: 45px auto;
 }
+
 
 
 /* ==================================================
@@ -454,6 +468,7 @@ input {
 
     gap: 20px;
 }
+
 
 
 /* ==================================================
@@ -473,6 +488,7 @@ input {
     background: #222222;
 }
 
+
 .main-news > img {
     position: absolute;
     inset: 0;
@@ -482,6 +498,7 @@ input {
 
     object-fit: cover;
 }
+
 
 .overlay {
     position: absolute;
@@ -494,6 +511,7 @@ input {
             rgba(0, 0, 0, 0.9) 100%
         );
 }
+
 
 .news-label {
     position: absolute;
@@ -513,6 +531,7 @@ input {
     font-weight: 700;
 }
 
+
 .main-news-content {
     position: absolute;
 
@@ -525,6 +544,7 @@ input {
     color: #ffffff;
 }
 
+
 .main-news-content h1 {
     max-width: 850px;
 
@@ -536,6 +556,7 @@ input {
     line-height: 1.15;
 }
 
+
 .main-news-content p {
     max-width: 850px;
 
@@ -543,6 +564,7 @@ input {
 
     line-height: 1.45;
 }
+
 
 .slider-buttons {
     position: absolute;
@@ -554,6 +576,7 @@ input {
 
     gap: 7px;
 }
+
 
 .slider-buttons button {
     width: 42px;
@@ -570,6 +593,7 @@ input {
 
     font-size: 22px;
 }
+
 
 
 /* ==================================================
@@ -590,10 +614,12 @@ input {
     background: #ffffff;
 }
 
+
 .today-box,
 .status-box {
     padding: 15px;
 }
+
 
 .box-title,
 .section-title {
@@ -610,6 +636,7 @@ input {
     border-bottom: 3px solid var(--blue);
 }
 
+
 .box-title h2,
 .section-title h2 {
     margin: 0;
@@ -622,12 +649,14 @@ input {
     line-height: 1.1;
 }
 
+
 .section-title a {
     color: var(--blue);
 
     font-size: 14px;
     font-weight: 700;
 }
+
 
 
 /* ==================================================
@@ -644,6 +673,7 @@ input {
     border-bottom: 1px solid #dddddd;
 }
 
+
 .today-news img {
     width: 100px;
     height: 80px;
@@ -655,11 +685,13 @@ input {
     border-radius: 10px;
 }
 
+
 .today-news h3 {
     font-size: 15px;
 
     line-height: 1.3;
 }
+
 
 .today-news small {
     display: block;
@@ -670,6 +702,7 @@ input {
 
     font-size: 12px;
 }
+
 
 .all-news {
     display: block;
@@ -682,6 +715,7 @@ input {
 
     font-weight: 700;
 }
+
 
 
 /* ==================================================
@@ -699,6 +733,7 @@ input {
     border-bottom: 1px solid #dddddd;
 }
 
+
 .status-item > i {
     width: 35px;
 
@@ -709,15 +744,18 @@ input {
     font-size: 21px;
 }
 
+
 .status-item div {
     flex: 1;
 }
+
 
 .status-item b {
     display: block;
 
     font-size: 14px;
 }
+
 
 .status-item small {
     display: block;
@@ -729,17 +767,20 @@ input {
     font-size: 11px;
 }
 
+
 .status-item > strong {
     color: var(--blue);
 
     font-size: 19px;
 }
 
+
 .status-item .green {
     color: var(--green);
 
     font-size: 13px;
 }
+
 
 .data-button {
     width: 100%;
@@ -759,6 +800,7 @@ input {
 
     font-weight: 700;
 }
+
 
 
 /* ==================================================
@@ -781,6 +823,7 @@ input {
     margin-top: 20px;
 }
 
+
 .featured-section {
     width: 100%;
 
@@ -789,6 +832,7 @@ input {
     padding: 20px;
 }
 
+
 .featured-grid {
     display: grid;
 
@@ -796,6 +840,7 @@ input {
 
     gap: 18px;
 }
+
 
 .featured-card {
     min-width: 0;
@@ -809,9 +854,11 @@ input {
     background: #ffffff;
 }
 
+
 .image-wrapper {
     position: relative;
 }
+
 
 .image-wrapper img {
     width: 100%;
@@ -819,6 +866,7 @@ input {
 
     object-fit: cover;
 }
+
 
 .image-wrapper span {
     position: absolute;
@@ -838,6 +886,7 @@ input {
     font-weight: 700;
 }
 
+
 .featured-card h3 {
     padding: 12px 12px 0;
 
@@ -845,6 +894,7 @@ input {
 
     line-height: 1.3;
 }
+
 
 .featured-card small {
     display: block;
@@ -855,6 +905,7 @@ input {
 
     font-size: 12px;
 }
+
 
 
 /* ==================================================
@@ -874,6 +925,7 @@ input {
     justify-self: stretch;
 }
 
+
 .earthquake .section-title {
     width: 100%;
 
@@ -884,6 +936,7 @@ input {
     justify-content: flex-start;
 }
 
+
 .earthquake .section-title h2 {
     margin: 0;
 
@@ -891,6 +944,7 @@ input {
 
     text-align: left;
 }
+
 
 .quake {
     width: 100%;
@@ -904,6 +958,7 @@ input {
 
     border-bottom: 1px solid #dddddd;
 }
+
 
 .quake > strong {
     width: 48px;
@@ -924,15 +979,18 @@ input {
     font-size: 18px;
 }
 
+
 .quake > div {
     min-width: 0;
 }
+
 
 .quake b {
     display: block;
 
     font-size: 14px;
 }
+
 
 .quake small {
     display: block;
@@ -945,6 +1003,7 @@ input {
 
     line-height: 1.3;
 }
+
 
 .earthquake button {
     width: 100%;
@@ -966,6 +1025,7 @@ input {
 }
 
 
+
 /* ==================================================
    ŞİLE'DEN HABERLER
 ================================================== */
@@ -975,6 +1035,7 @@ input {
 
     padding: 20px;
 }
+
 
 .categories {
     display: flex;
@@ -986,6 +1047,7 @@ input {
 
     overflow-x: auto;
 }
+
 
 .categories a {
     flex-shrink: 0;
@@ -1000,15 +1062,18 @@ input {
     font-weight: 600;
 }
 
+
 .categories a:hover {
     background: var(--light-blue);
 }
+
 
 .categories .active {
     background: var(--dark-blue);
 
     color: #ffffff;
 }
+
 
 .news-grid {
     display: grid;
@@ -1017,6 +1082,7 @@ input {
 
     gap: 18px;
 }
+
 
 .news-card {
     overflow: hidden;
@@ -1028,12 +1094,14 @@ input {
     background: #ffffff;
 }
 
+
 .news-card img {
     width: 100%;
     height: 175px;
 
     object-fit: cover;
 }
+
 
 .news-card h3 {
     padding: 12px 12px 0;
@@ -1042,6 +1110,7 @@ input {
 
     line-height: 1.35;
 }
+
 
 .news-card small {
     display: block;
@@ -1052,6 +1121,7 @@ input {
 
     font-size: 12px;
 }
+
 
 
 /* ==================================================
@@ -1068,10 +1138,12 @@ input {
     margin-top: 25px;
 }
 
+
 .gallery,
 .social {
     padding: 20px;
 }
+
 
 
 /* ==================================================
@@ -1086,6 +1158,7 @@ input {
     gap: 15px;
 }
 
+
 .big-image {
     width: 100%;
     height: 290px;
@@ -1095,6 +1168,7 @@ input {
     border-radius: 15px;
 }
 
+
 .small-images {
     display: flex;
 
@@ -1103,12 +1177,14 @@ input {
     gap: 12px;
 }
 
+
 .small-images > div {
     display: flex;
     align-items: center;
 
     gap: 10px;
 }
+
 
 .small-images img {
     width: 95px;
@@ -1121,12 +1197,14 @@ input {
     border-radius: 12px;
 }
 
+
 .small-images span {
     font-size: 13px;
     font-weight: 600;
 
     line-height: 1.3;
 }
+
 
 
 /* ==================================================
@@ -1141,6 +1219,7 @@ input {
     gap: 12px;
 }
 
+
 .social-grid article {
     min-height: 175px;
 
@@ -1151,11 +1230,13 @@ input {
     border-radius: 15px;
 }
 
+
 .social-grid b {
     color: var(--navy);
 
     font-size: 13px;
 }
+
 
 .social-grid hr {
     margin: 12px 0;
@@ -1165,6 +1246,7 @@ input {
     border-top: 1px solid #dddddd;
 }
 
+
 .social-grid p {
     color: #444444;
 
@@ -1172,6 +1254,7 @@ input {
 
     line-height: 1.5;
 }
+
 
 .social-grid small {
     display: block;
@@ -1182,6 +1265,7 @@ input {
 
     font-size: 11px;
 }
+
 
 
 /* ==================================================
@@ -1197,6 +1281,7 @@ input {
 
     margin: 40px 0;
 }
+
 
 .promo-card {
     min-height: 140px;
@@ -1217,9 +1302,11 @@ input {
     transition: 0.2s ease;
 }
 
+
 .promo-card:hover {
     transform: translateY(-3px);
 }
+
 
 .promo-card > i {
     flex-shrink: 0;
@@ -1229,9 +1316,11 @@ input {
     font-size: 38px;
 }
 
+
 .promo-card div {
     flex: 1;
 }
+
 
 .promo-card h3 {
     margin-bottom: 7px;
@@ -1241,12 +1330,14 @@ input {
     font-size: 13px;
 }
 
+
 .promo-card p {
     font-size: 16px;
     font-weight: 700;
 
     line-height: 1.35;
 }
+
 
 .promo-card > span {
     width: 35px;
@@ -1264,6 +1355,7 @@ input {
 
     color: var(--blue);
 }
+
 
 
 /* ==================================================
@@ -1289,11 +1381,13 @@ footer {
     color: #ffffff;
 }
 
+
 footer h3 {
     margin-bottom: 15px;
 
     font-size: 15px;
 }
+
 
 footer p,
 footer a {
@@ -1306,13 +1400,16 @@ footer a {
     font-size: 13px;
 }
 
+
 footer a:hover {
     color: #ffffff;
 }
 
+
 .footer-brand h3 {
     font-size: 20px;
 }
+
 
 .footer-social i {
     margin-right: 15px;
@@ -1320,11 +1417,13 @@ footer a:hover {
     font-size: 24px;
 }
 
+
 .subscribe-form {
     display: flex;
 
     margin-top: 12px;
 }
+
 
 .subscribe-form input {
     min-width: 0;
@@ -1339,6 +1438,7 @@ footer a:hover {
 
     outline: none;
 }
+
 
 .subscribe-form button {
     width: 45px;
@@ -1355,6 +1455,7 @@ footer a:hover {
 }
 
 
+
 /* ==================================================
    TABLET
 ================================================== */
@@ -1367,38 +1468,48 @@ footer a:hover {
         padding: 25px 0;
     }
 
+
     .header-info {
         margin-left: 0;
     }
+
 
     .top-grid {
         grid-template-columns: 1fr 1fr;
     }
 
+
     .main-news {
         grid-column: span 2;
     }
+
 
     .featured-row {
         grid-template-columns: 1fr;
     }
 
+
     .earthquake {
         width: 100%;
     }
+
 
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
+
     .middle-grid {
         grid-template-columns: 1fr;
     }
 
+
     footer {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
+
 
 
 /* ==================================================
@@ -1409,42 +1520,41 @@ footer a:hover {
 
     .live-bar {
         height: 54px;
-        min-height: 54px;
     }
+
 
     .live-label {
         height: 54px;
-        min-width: 95px;
 
         padding: 0 18px;
 
         font-size: 15px;
     }
 
-    .ticker-window,
-    .ticker-track,
-    .ticker-group,
-    .breaking {
-        height: 54px;
-    }
 
     .breaking {
+        height: 54px;
+
         padding: 0 22px;
 
         font-size: 13px;
     }
 
+
     .ticker-track {
         animation-duration: 32s;
     }
+
 
     .header {
         align-items: flex-start;
     }
 
+
     .header-info {
         width: 100%;
     }
+
 
     .weather,
     .sea {
@@ -1453,21 +1563,26 @@ footer a:hover {
         border-right: 0;
     }
 
+
     .social-header {
         width: 100%;
     }
+
 
     .navbar {
         border-radius: 15px;
     }
 
+
     .navbar .newsletter {
         margin-left: 0;
     }
 
+
     .top-grid {
         grid-template-columns: 1fr;
     }
+
 
     .main-news {
         grid-column: auto;
@@ -1475,36 +1590,45 @@ footer a:hover {
         min-height: 520px;
     }
 
+
     .main-news-content {
         padding-right: 0;
 
         bottom: 75px;
     }
 
+
     .featured-grid {
         grid-template-columns: 1fr;
     }
+
 
     .news-grid {
         grid-template-columns: 1fr;
     }
 
+
     .gallery-content {
         grid-template-columns: 1fr;
     }
+
 
     .social-grid {
         grid-template-columns: 1fr;
     }
 
+
     .promo-grid {
         grid-template-columns: 1fr;
     }
 
+
     footer {
         grid-template-columns: 1fr;
     }
+
 }
+
 
 
 /* ==================================================
@@ -1519,26 +1643,32 @@ footer a:hover {
         margin-top: 25px;
     }
 
+
     .header {
         width: 92%;
     }
 
+
     .site-logo {
         width: 190px;
     }
+
 
     .weather > i,
     .sea > i {
         font-size: 29px;
     }
 
+
     .weather strong {
         font-size: 27px;
     }
 
+
     .navbar {
         width: 92%;
     }
+
 
     .main-news {
         min-height: 470px;
@@ -1546,19 +1676,23 @@ footer a:hover {
         border-radius: 18px;
     }
 
+
     .main-news-content {
         left: 17px;
         right: 17px;
         bottom: 70px;
     }
 
+
     .main-news-content h1 {
         font-size: 28px;
     }
 
+
     .main-news-content p {
         font-size: 14px;
     }
+
 
     .today-box,
     .status-box,
@@ -1570,6 +1704,7 @@ footer a:hover {
         border-radius: 18px;
     }
 
+
     .featured-section,
     .earthquake,
     .news-section,
@@ -1578,27 +1713,34 @@ footer a:hover {
         padding: 15px;
     }
 
+
     .box-title h2,
     .section-title h2 {
         font-size: 18px;
     }
 
+
     .section-title a {
         font-size: 12px;
     }
+
 
     .big-image {
         height: 220px;
     }
 
+
     .promo-card {
         min-height: 120px;
     }
 
+
     .breaking {
         padding: 0 18px;
     }
+
 }
+
 
 
 /* ==================================================
@@ -1611,4 +1753,5 @@ footer a:hover {
     .live-dot {
         animation: none;
     }
+
 }
