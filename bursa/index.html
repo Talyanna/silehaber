@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Bursa Haber Merkezi - Bursa'dan gündem, ulaşım, yaşam, belediye ve ilçe haberleri."
+    >
+
+    <title>Bursa Haber Merkezi</title>
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+
+<body>
+
+
+<!-- CANLI HABER ŞERİDİ -->
+
+<div class="live-bar">
+
+    <div class="live-label">
+        <span class="live-dot"></span>
+        CANLI
+    </div>
+
+
+    <div class="ticker-window">
+
+        <div class="ticker-track">
+
+
+            <div class="ticker-group">
+
+                <div class="breaking">
+                    <small>09:20</small>
+                    Bursa gündemindeki gelişmeler Bursa Haber Merkezi'nde
+                </div>
+
+                <div class="breaking">
+                    <small>10:05</small>
+                    Nilüfer, Osmangazi ve Yıldırım'dan güncel gelişmeler
+                </div>
+
+                <div class="breaking">
+                    <small>11:30</small>
+                    Bursa'nın ilçelerinden son haberler
+                </div>
+
+                <div class="breaking">
+                    <small>12:15</small>
+                    Kent yaşamı ve ulaşım gündemi yakından takip ediliyor
+                </div>
+
+            </div>
+
+
+            <div
+                class="ticker-group"
+                aria-hidden="true"
+            >
+
+                <div class="breaking">
+                    <small>09:20</small>
+                    Bursa gündemindeki gelişmeler Bursa Haber Merkezi'nde
+                </div>
+
+                <div class="breaking">
+                    <small>10:05</small>
+                    Nilüfer, Osmangazi ve Yıldırım'dan güncel gelişmeler
+                </div>
+
+                <div class="breaking">
+                    <small>11:30</small>
+                    Bursa'nın ilçelerinden son haberler
+                </div>
+
+                <div class="breaking">
+                    <small>12:15</small>
+                    Kent yaşamı ve ulaşım gündemi yakından takip ediliyor
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <a
+        href="#"
+        class="logo-area"
+    >
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-tree-city"></i>
+        </div>
+
+
+        <div class="logo-text">
+
+            <strong>
+                BURSA
+            </strong>
+
+            <span>
+                HABER MERKEZİ
+            </span>
+
+            <small>
+                Yeşil şehrin nabzı burada atıyor.
+            </small>
+
+        </div>
+
+    </a>
+
+
+    <div class="header-info">
+
+
+        <div class="weather">
+
+            <i
+                id="header-weather-icon"
+                class="fa-solid fa-cloud-sun"
+            ></i>
+
+
+            <div>
+
+                <strong id="header-temperature">
+                    —°
+                </strong>
+
+                <span>
+                    Bursa
+                </span>
+
+                <small id="header-weather-text">
+                    Hava durumu yükleniyor...
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="sea">
+
+            <i class="fa-solid fa-wind"></i>
+
+            <div>
+
+                <p>
+                    Nem
+                    <b id="header-humidity">
+                        —%
+                    </b>
+                </p>
+
+                <p>
+                    Rüzgâr
+                    <b id="header-wind">
+                        — km/s
+                    </b>
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="social-header">
+
+        <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="X">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="#" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <button
+            type="button"
+            class="search-button"
+            aria-label="Haberlerde ara"
+        >
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <a
+        href="#"
+        class="home"
+        aria-label="Ana Sayfa"
+    >
+        <i class="fa-solid fa-house"></i>
+    </a>
+
+    <a href="#">GÜNDEM</a>
+    <a href="#">BURSA</a>
+    <a href="#">NİLÜFER</a>
+    <a href="#">OSMANGAZİ</a>
+    <a href="#">YILDIRIM</a>
+    <a href="#">MUDANYA</a>
+    <a href="#">GEMLİK</a>
+    <a href="#">ULAŞIM</a>
+    <a href="#">BELEDİYE</a>
+    <a href="#">YAŞAM</a>
+
+    <a
+        href="#"
+        class="newsletter"
+    >
+        BÜLTENE KATIL
+        <i class="fa-regular fa-envelope"></i>
+    </a>
+
+</nav>
+
+
+<main class="container">
+
+
+<section class="top-grid">
+
+
+    <!-- ANA HABER -->
+
+    <article class="main-news">
+
+        <img
+            src="./bursa.jpeg"
+            alt="Bursa şehir manzarası"
+        >
+
+        <div class="overlay"></div>
+
+
+        <span class="news-label">
+            Gelişen Olay
+        </span>
+
+
+        <div class="main-news-content">
+
+            <h1>
+                Bursa gündeminden son gelişmeler
+            </h1>
+
+            <p>
+                Bursa'nın ulaşım, yaşam, belediye,
+                ekonomi ve ilçe gündemindeki gelişmeler
+                Bursa Haber Merkezi'nde.
+            </p>
+
+        </div>
+
+
+        <div class="slider-buttons">
+
+            <button
+                type="button"
+                aria-label="Önceki haber"
+            >
+                ←
+            </button>
+
+            <button
+                type="button"
+                aria-label="Sonraki haber"
+            >
+                →
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- BURSA'DA BUGÜN -->
+
+    <section class="today-box">
+
+        <div class="box-title">
+            <h2>
+                BURSA'DA BUGÜN
+            </h2>
+        </div>
+
+
+        <article class="today-news">
+
+            <img
+                src="./bursa1.jpeg"
+                alt="Nilüfer"
+            >
+
+            <div>
+
+                <h3>
+                    Nilüfer'den güncel gelişmeler
+                </h3>
+
+                <small>
+                    Güncel
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <article class="today-news">
+
+            <img
+                src="./bursa2.jpeg"
+                alt="Osmangazi"
+            >
+
+            <div>
+
+                <h3>
+                    Osmangazi'nin kent ve yaşam gündemi
+                </h3>
+
+                <small>
+                    Güncel
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <article class="today-news">
+
+            <img
+                src="./bursa3.jpeg"
+                alt="Mudanya"
+            >
+
+            <div>
+
+                <h3>
+                    Mudanya'dan sahil ve ulaşım haberleri
+                </h3>
+
+                <small>
+                    Güncel
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <article class="today-news">
+
+            <img
+                src="./bursa4.jpeg"
+                alt="Bursa"
+            >
+
+            <div>
+
+                <h3>
+                    Bursa'nın ilçelerinden son haberler
+                </h3>
+
+                <small>
+                    Güncel
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <a
+            href="#"
+            class="all-news"
+        >
+            Tüm Haberler →
+        </a>
+
+    </section>
+
+
+    <!-- ŞİMDİ BURSA'DA -->
+
+    <section class="status-box">
+
+        <div class="box-title">
+            <h2>
+                ŞİMDİ BURSA'DA
+            </h2>
+        </div>
+
+
+        <div class="status-item">
+
+            <i class="fa-solid fa-temperature-half"></i>
+
+            <div>
+
+                <b>
+                    Hava Sıcaklığı
+                </b>
+
+                <small id="weather-description">
+                    Yükleniyor...
+                </small>
+
+            </div>
+
+            <strong id="bursa-temperature">
+                —°
+            </strong>
+
+        </div>
+
+
+        <div class="status-item">
+
+            <i class="fa-solid fa-droplet"></i>
+
+            <div>
+
+                <b>
+                    Nem
+                </b>
+
+                <small>
+                    Bursa merkez
+                </small>
+
+            </div>
+
+            <strong id="bursa-humidity">
+                —%
+            </strong>
+
+        </div>
+
+
+        <div class="status-item">
+
+            <i class="fa-solid fa-wind"></i>
+
+            <div>
+
+                <b>
+                    Rüzgâr
+                </b>
+
+                <small>
+                    Bursa merkez
+                </small>
+
+            </div>
+
+            <strong id="bursa-wind">
+                — km/s
+            </strong>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="status-item status-action"
+            id="pharmacy-toggle"
+            aria-expanded="false"
+        >
+
+            <i class="fa-solid fa-prescription-bottle-medical"></i>
+
+            <div>
+
+                <b>
+                    Nöbetçi Eczaneler
+                </b>
+
+                <small id="pharmacy-subtitle">
+                    Bursa verisi yükleniyor...
+                </small>
+
+            </div>
+
+            <strong id="pharmacy-count">
+                —
+            </strong>
+
+            <i class="fa-solid fa-chevron-down status-arrow"></i>
+
+        </button>
+
+
+        <div class="status-item">
+
+            <i class="fa-solid fa-water"></i>
+
+            <div>
+
+                <b>
+                    Sahil / Deniz
+                </b>
+
+                <small>
+                    Canlı veri daha sonra bağlanacak
+                </small>
+
+            </div>
+
+            <strong>
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="status-item">
+
+            <i class="fa-solid fa-dollar-sign"></i>
+
+            <div>
+
+                <b>
+                    Dolar / TL
+                </b>
+
+                <small>
+                    TCMB gösterge kuru
+                </small>
+
+            </div>
+
+            <strong id="usd-try">
+                — ₺
+            </strong>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="data-button"
+            id="refresh-all-data"
+        >
+
+            <i class="fa-solid fa-rotate"></i>
+
+            Verileri Yenile
+
+        </button>
+
+    </section>
+
+
+</section>
+
+
+<!-- ECZANE PANELİ -->
+
+<section
+    class="pharmacy-panel"
+    id="pharmacy-panel"
+    hidden
+>
+
+    <div class="pharmacy-panel-header">
+
+        <div>
+
+            <span class="mini-title">
+                CANLI VERİ
+            </span>
+
+            <h2>
+                Bursa Nöbetçi Eczaneleri
+            </h2>
+
+            <p id="pharmacy-panel-description">
+                Bugün açık nöbetçi eczaneler yükleniyor...
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="pharmacy-close"
+            id="pharmacy-close"
+            aria-label="Eczane listesini kapat"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div
+        class="pharmacy-list"
+        id="pharmacy-list"
+    >
+
+        <div class="loading-card">
+
+            <i class="fa-solid fa-spinner fa-spin"></i>
+
+            Eczaneler yükleniyor...
+
+        </div>
+
+    </div>
+
+
+    <div class="pharmacy-source">
+
+        Veri:
+
+        <a
+            href="https://eczaneadresi.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Eczane Adresi
+        </a>
+
+        <span>
+            • Yola çıkmadan önce telefonla teyit etmeniz önerilir.
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- ÖNE ÇIKANLAR + DEPREM -->
+
+<section class="featured-row">
+
+
+    <section class="featured-section">
+
+        <div class="section-title">
+
+            <h2>
+                ÖNE ÇIKANLAR
+            </h2>
+
+            <a href="#">
+                Tümünü Gör →
+            </a>
+
+        </div>
+
+
+        <div class="featured-grid">
+
+
+            <article class="featured-card">
+
+                <div class="image-wrapper">
+
+                    <img
+                        src="./bursa5.jpeg"
+                        alt="Nilüfer"
+                    >
+
+                    <span>
+                        NİLÜFER
+                    </span>
+
+                </div>
+
+                <h3>
+                    Nilüfer'den şehir gündemine dair gelişmeler
+                </h3>
+
+                <small>
+                    Bursa Haber Merkezi
+                </small>
+
+            </article>
+
+
+            <article class="featured-card">
+
+                <div class="image-wrapper">
+
+                    <img
+                        src="./bursa6.jpeg"
+                        alt="Osmangazi"
+                    >
+
+                    <span>
+                        OSMANGAZİ
+                    </span>
+
+                </div>
+
+                <h3>
+                    Osmangazi'nin kültür ve yaşam gündemi
+                </h3>
+
+                <small>
+                    Bursa Haber Merkezi
+                </small>
+
+            </article>
+
+
+            <article class="featured-card">
+
+                <div class="image-wrapper">
+
+                    <img
+                        src="./bursa7.jpeg"
+                        alt="Mudanya"
+                    >
+
+                    <span>
+                        MUDANYA
+                    </span>
+
+                </div>
+
+                <h3>
+                    Mudanya'dan güncel gelişmeler
+                </h3>
+
+                <small>
+                    Bursa Haber Merkezi
+                </small>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <aside class="earthquake">
+
+        <div class="section-title">
+
+            <h2>
+                SON DEPREMLER
+            </h2>
+
+            <span class="live-data-badge">
+                CANLI
+            </span>
+
+        </div>
+
+
+        <div id="earthquake-list">
+
+            <div class="quake">
+
+                <strong>
+                    —
+                </strong>
+
+                <div>
+
+                    <b>
+                        Deprem verileri yükleniyor...
+                    </b>
+
+                    <small>
+                        AFAD
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="refresh-earthquakes"
+        >
+            Yenile ↻
+        </button>
+
+    </aside>
+
+
+</section>
+
+
+<!-- BURSA'DAN HABERLER -->
+
+<section class="news-section">
+
+    <div class="section-title">
+
+        <h2>
+            BURSA'DAN HABERLER
+        </h2>
+
+        <a href="#">
+            Tümünü Gör →
+        </a>
+
+    </div>
+
+
+    <div class="categories">
+
+        <a href="#" class="active">Tümü</a>
+        <a href="#">Nilüfer</a>
+        <a href="#">Osmangazi</a>
+        <a href="#">Yıldırım</a>
+        <a href="#">Mudanya</a>
+        <a href="#">Gemlik</a>
+        <a href="#">Ulaşım</a>
+        <a href="#">Belediye</a>
+
+    </div>
+
+
+    <div class="news-grid">
+
+
+        <article class="news-card">
+
+            <img
+                src="./bursa8.jpeg"
+                alt="Bursa"
+            >
+
+            <h3>
+                Bursa merkezden güncel haberler
+            </h3>
+
+            <small>
+                Bursa Haber Merkezi
+            </small>
+
+        </article>
+
+
+        <article class="news-card">
+
+            <img
+                src="./bursa9.jpeg"
+                alt="Bursa ulaşım"
+            >
+
+            <h3>
+                Bursa ulaşım gündemindeki gelişmeler
+            </h3>
+
+            <small>
+                Bursa Haber Merkezi
+            </small>
+
+        </article>
+
+
+        <article class="news-card">
+
+            <img
+                src="./bursa10.jpeg"
+                alt="Mudanya"
+            >
+
+            <h3>
+                Mudanya ve sahil hattından son gelişmeler
+            </h3>
+
+            <small>
+                Bursa Haber Merkezi
+            </small>
+
+        </article>
+
+
+        <article class="news-card">
+
+            <img
+                src="./bursa11.jpeg"
+                alt="Bursa"
+            >
+
+            <h3>
+                Bursa'nın farklı ilçelerinden son haberler
+            </h3>
+
+            <small>
+                Bursa Haber Merkezi
+            </small>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- GALERİ + SOSYAL -->
+
+<section class="middle-grid">
+
+
+    <section class="gallery">
+
+        <div class="section-title">
+
+            <h2>
+                BURSA'DAN GÖRÜNTÜLER
+            </h2>
+
+            <a href="#">
+                Tümünü Gör →
+            </a>
+
+        </div>
+
+
+        <div class="gallery-content">
+
+            <img
+                class="big-image"
+                src="./bursa12.jpeg"
+                alt="Bursa manzarası"
+            >
+
+
+            <div class="small-images">
+
+                <div>
+
+                    <img
+                        src="./bursa13.jpeg"
+                        alt="Bursa"
+                    >
+
+                    <span>
+                        Bursa'dan şehir manzaraları
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <img
+                        src="./bursa14.jpeg"
+                        alt="Bursa"
+                    >
+
+                    <span>
+                        Yeşil Bursa'dan günün görüntüsü
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <img
+                        src="./bursa.jpeg"
+                        alt="Bursa genel görünüm"
+                    >
+
+                    <span>
+                        Bursa'dan günün karesi
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="social">
+
+        <div class="section-title">
+
+            <h2>
+                SOSYAL'DE BURSA
+            </h2>
+
+            <a href="#">
+                Tümünü Gör →
+            </a>
+
+        </div>
+
+
+        <div class="social-grid">
+
+
+            <article>
+
+                <b>
+                    <i class="fa-brands fa-instagram"></i>
+                    @bursahabermrkz
+                </b>
+
+                <hr>
+
+                <p>
+                    Bursa'dan günün en güzel kareleri.
+                </p>
+
+                <small>
+                    Instagram
+                </small>
+
+            </article>
+
+
+            <article>
+
+                <b>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    @bursahabermrkz
+                </b>
+
+                <hr>
+
+                <p>
+                    Bursa'daki gelişmeleri takip edin.
+                </p>
+
+                <small>
+                    X
+                </small>
+
+            </article>
+
+
+            <article>
+
+                <b>
+                    <i class="fa-brands fa-facebook"></i>
+                    Bursa Haber Merkezi
+                </b>
+
+                <hr>
+
+                <p>
+                    Şehrin gündeminden gelişmeler.
+                </p>
+
+                <small>
+                    Facebook
+                </small>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+</section>
+
+
+<!-- PROMO -->
+
+<section class="promo-grid">
+
+
+    <a href="#" class="promo-card">
+
+        <i class="fa-solid fa-file-lines"></i>
+
+        <div>
+
+            <h3>
+                HAFTANIN DOSYASI
+            </h3>
+
+            <p>
+                Bursa gündeminden özel dosyalar
+            </p>
+
+        </div>
+
+        <span>→</span>
+
+    </a>
+
+
+    <a href="#" class="promo-card">
+
+        <i class="fa-solid fa-map-location-dot"></i>
+
+        <div>
+
+            <h3>
+                BURSA REHBERİ
+            </h3>
+
+            <p>
+                İlçeler, tarih ve şehir yaşamı
+            </p>
+
+        </div>
+
+        <span>→</span>
+
+    </a>
+
+
+    <a href="#" class="promo-card">
+
+        <i class="fa-solid fa-camera"></i>
+
+        <div>
+
+            <h3>
+                FOTO GALERİ
+            </h3>
+
+            <p>
+                Bursa'nın en güzel kareleri
+            </p>
+
+        </div>
+
+        <span>→</span>
+
+    </a>
+
+
+</section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+
+    <div class="footer-brand">
+
+        <h3>
+            Bursa Haber Merkezi
+        </h3>
+
+        <p>
+            Yeşil şehrin nabzı burada atıyor.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Kurumsal
+        </h3>
+
+        <a href="#">Hakkımızda</a>
+        <a href="#">Ekibimiz</a>
+        <a href="#">İletişim</a>
+        <a href="#">Künye</a>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Kategoriler
+        </h3>
+
+        <a href="#">Gündem</a>
+        <a href="#">Ulaşım</a>
+        <a href="#">Yaşam</a>
+        <a href="#">Belediye</a>
+
+    </div>
+
+
+    <div class="footer-social">
+
+        <h3>
+            BİZİ TAKİP EDİN
+        </h3>
+
+        <div>
+
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+
+        </div>
+
+    </div>
+
+
+    <div class="subscribe">
+
+        <h3>
+            BÜLTENE KATILIN
+        </h3>
+
+        <p>
+            Bursa'dan haberiniz olsun
+        </p>
+
+
+        <div class="subscribe-form">
+
+            <input
+                type="email"
+                placeholder="E-posta adresiniz"
+                aria-label="E-posta adresiniz"
+            >
+
+            <button
+                type="button"
+                aria-label="Bültene katıl"
+            >
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+</footer>
+
+
+<script src="./script.js"></script>
+
+
+</body>
+</html>
