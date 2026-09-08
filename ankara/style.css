@@ -54,6 +54,10 @@ input {
     font-family: inherit;
 }
 
+button {
+    cursor: pointer;
+}
+
 
 /* ==================================================
    KAYAN CANLI HABER BANDI
@@ -183,7 +187,7 @@ input {
 
 
 /* ==================================================
-   LOGO
+   YENİ ANKARA LOGOSU
 ================================================== */
 
 .logo-area {
@@ -192,43 +196,20 @@ input {
     flex-shrink: 0;
 }
 
-.logo-icon {
-    width: 72px;
-    height: 72px;
-    margin-right: 14px;
+.logo-image-area {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    background: var(--gold-light);
-    color: var(--navy);
-    font-size: 34px;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: auto;
 }
 
-.logo-text strong {
+.logo-image-area .site-logo {
     display: block;
-    color: var(--navy);
-    font-size: 35px;
-    font-weight: 900;
-    line-height: .95;
-    letter-spacing: 1px;
-}
-
-.logo-text span {
-    display: block;
-    margin-top: 4px;
-    color: var(--gold);
-    font-size: 16px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.logo-text small {
-    display: block;
-    margin-top: 5px;
-    color: var(--gray);
-    font-size: 10px;
-    font-weight: 600;
+    width: 170px;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
 }
 
 
@@ -1143,6 +1124,11 @@ footer a:hover {
         align-items: flex-start;
     }
 
+    /* Ankara logosu tablet */
+    .logo-image-area .site-logo {
+        width: 155px;
+    }
+
     .header-info {
         width: 100%;
     }
@@ -1220,18 +1206,9 @@ footer a:hover {
         width: 92%;
     }
 
-    .logo-icon {
-        width: 58px;
-        height: 58px;
-        font-size: 27px;
-    }
-
-    .logo-text strong {
-        font-size: 27px;
-    }
-
-    .logo-text span {
-        font-size: 12px;
+    /* Ankara logosu telefon */
+    .logo-image-area .site-logo {
+        width: 140px;
     }
 
     .navbar {
