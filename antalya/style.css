@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 :root {
     --navy: #063f46;
     --dark-blue: #032d33;
@@ -22,11 +21,9 @@
     --cream: #fbf8f0;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     font-family: "Roboto", sans-serif;
@@ -34,36 +31,33 @@ body {
     background: #ffffff;
 }
 
-
 img {
     display: block;
     max-width: 100%;
 }
-
 
 a {
     color: inherit;
     text-decoration: none;
 }
 
-
 button,
 input {
     font-family: inherit;
 }
 
-
 button {
     cursor: pointer;
 }
-
 
 [hidden] {
     display: none !important;
 }
 
 
-/* CANLI ŞERİT */
+/* ==================================================
+   CANLI ŞERİT
+================================================== */
 
 .live-bar {
     width: 100%;
@@ -74,7 +68,6 @@ button {
     background: var(--navy);
     color: #ffffff;
 }
-
 
 .live-label {
     position: relative;
@@ -90,7 +83,6 @@ button {
     box-shadow: 8px 0 18px rgba(0,0,0,.16);
 }
 
-
 .live-dot {
     width: 11px;
     height: 11px;
@@ -100,13 +92,11 @@ button {
     animation: livePulse 1.4s infinite;
 }
 
-
 .ticker-window {
     flex: 1;
     height: 62px;
     overflow: hidden;
 }
-
 
 .ticker-track {
     width: max-content;
@@ -117,14 +107,12 @@ button {
     will-change: transform;
 }
 
-
 .ticker-group {
     height: 100%;
     display: flex;
     align-items: center;
     flex-shrink: 0;
 }
-
 
 .breaking {
     height: 62px;
@@ -138,7 +126,6 @@ button {
     font-size: 14px;
 }
 
-
 .breaking small {
     margin-right: 9px;
     color: #bce9e6;
@@ -146,9 +133,7 @@ button {
     font-weight: 800;
 }
 
-
 @keyframes tickerMove {
-
     from {
         transform: translateX(0);
     }
@@ -156,12 +141,9 @@ button {
     to {
         transform: translateX(-50%);
     }
-
 }
 
-
 @keyframes livePulse {
-
     0% {
         opacity: 1;
         transform: scale(1);
@@ -176,16 +158,16 @@ button {
         opacity: 1;
         transform: scale(1);
     }
-
 }
-
 
 .ticker-window:hover .ticker-track {
     animation-play-state: paused;
 }
 
 
-/* HEADER */
+/* ==================================================
+   HEADER
+================================================== */
 
 .header {
     width: 94%;
@@ -199,60 +181,42 @@ button {
 }
 
 
+/* ==================================================
+   ANTALYA YENİ LOGO
+================================================== */
+
 .logo-area {
     display: flex;
     align-items: center;
     flex-shrink: 0;
 }
 
-
-.logo-icon {
-    width: 72px;
-    height: 72px;
-    margin-right: 14px;
+.logo-image-area {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    background: var(--light-blue);
-    color: var(--navy);
-    font-size: 34px;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: auto;
 }
 
-
-.logo-text strong {
+.logo-image-area .site-logo {
     display: block;
-    color: var(--navy);
-    font-size: 35px;
-    font-weight: 900;
-    line-height: .95;
+    width: 170px;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
 }
 
 
-.logo-text span {
-    display: block;
-    margin-top: 4px;
-    color: var(--coral);
-    font-size: 16px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-
-.logo-text small {
-    display: block;
-    margin-top: 5px;
-    color: var(--gray);
-    font-size: 10px;
-}
-
+/* ==================================================
+   HEADER BİLGİ
+================================================== */
 
 .header-info {
     margin-left: auto;
     display: flex;
     align-items: center;
 }
-
 
 .weather,
 .sea {
@@ -264,13 +228,11 @@ button {
     border-right: 1px solid var(--border);
 }
 
-
 .weather > i,
 .sea > i {
     color: var(--gold);
     font-size: 38px;
 }
-
 
 .weather strong {
     display: block;
@@ -278,29 +240,29 @@ button {
     font-size: 34px;
 }
 
-
 .weather span {
     display: block;
     font-size: 15px;
 }
 
-
 .weather small {
     color: #999999;
 }
-
 
 .sea p {
     color: #777777;
     font-size: 15px;
 }
 
-
 .sea b {
     color: var(--navy);
     font-size: 18px;
 }
 
+
+/* ==================================================
+   HEADER SOSYAL MEDYA
+================================================== */
 
 .social-header {
     display: flex;
@@ -310,17 +272,14 @@ button {
     font-size: 23px;
 }
 
-
 .social-header a {
     transition: .2s ease;
 }
-
 
 .social-header a:hover {
     color: var(--coral);
     transform: translateY(-2px);
 }
-
 
 .search-button {
     border: 0;
@@ -330,7 +289,9 @@ button {
 }
 
 
-/* NAVBAR */
+/* ==================================================
+   NAVBAR
+================================================== */
 
 .navbar {
     width: 94%;
@@ -341,7 +302,6 @@ button {
     align-items: center;
     overflow-x: auto;
     border-radius: 35px;
-
     background:
         linear-gradient(
             90deg,
@@ -351,7 +311,6 @@ button {
         );
 }
 
-
 .navbar a {
     flex-shrink: 0;
     padding: 20px 14px;
@@ -360,11 +319,9 @@ button {
     font-weight: 700;
 }
 
-
 .navbar a:hover {
     background: rgba(255,255,255,.12);
 }
-
 
 .navbar .home {
     width: 75px;
@@ -374,7 +331,6 @@ button {
     font-size: 22px;
 }
 
-
 .navbar .newsletter {
     margin-left: auto;
     margin-right: 5px;
@@ -383,7 +339,9 @@ button {
 }
 
 
-/* ANA ALAN */
+/* ==================================================
+   ANA ALAN
+================================================== */
 
 .container {
     width: 94%;
@@ -391,20 +349,19 @@ button {
     margin: 45px auto;
 }
 
-
 .top-grid {
     display: grid;
-
     grid-template-columns:
         minmax(0,2fr)
         minmax(300px,1fr)
         minmax(300px,1fr);
-
     gap: 20px;
 }
 
 
-/* ANA HABER */
+/* ==================================================
+   ANA HABER
+================================================== */
 
 .main-news {
     position: relative;
@@ -415,7 +372,6 @@ button {
     background: #222222;
 }
 
-
 .main-news > img {
     position: absolute;
     inset: 0;
@@ -424,11 +380,9 @@ button {
     object-fit: cover;
 }
 
-
 .overlay {
     position: absolute;
     inset: 0;
-
     background:
         linear-gradient(
             to bottom,
@@ -436,7 +390,6 @@ button {
             rgba(3,45,51,.96)
         );
 }
-
 
 .news-label {
     position: absolute;
@@ -449,7 +402,6 @@ button {
     font-weight: 700;
 }
 
-
 .main-news-content {
     position: absolute;
     left: 25px;
@@ -459,7 +411,6 @@ button {
     color: #ffffff;
 }
 
-
 .main-news-content h1 {
     margin-bottom: 12px;
     font-size: clamp(30px,3vw,45px);
@@ -467,12 +418,10 @@ button {
     line-height: 1.15;
 }
 
-
 .main-news-content p {
     font-size: 17px;
     line-height: 1.45;
 }
-
 
 .slider-buttons {
     position: absolute;
@@ -481,7 +430,6 @@ button {
     display: flex;
     gap: 7px;
 }
-
 
 .slider-buttons button {
     width: 42px;
@@ -493,7 +441,9 @@ button {
 }
 
 
-/* KUTULAR */
+/* ==================================================
+   KUTULAR
+================================================== */
 
 .today-box,
 .status-box,
@@ -507,12 +457,10 @@ button {
     background: #ffffff;
 }
 
-
 .today-box,
 .status-box {
     padding: 15px;
 }
-
 
 .box-title,
 .section-title {
@@ -524,13 +472,11 @@ button {
     border-bottom: 3px solid var(--coral);
 }
 
-
 .box-title h2,
 .section-title h2 {
     font-size: 21px;
     font-weight: 900;
 }
-
 
 .section-title a {
     color: var(--blue);
@@ -539,7 +485,9 @@ button {
 }
 
 
-/* BUGÜN */
+/* ==================================================
+   BUGÜN
+================================================== */
 
 .today-news {
     display: flex;
@@ -547,7 +495,6 @@ button {
     padding: 13px 0;
     border-bottom: 1px solid var(--border);
 }
-
 
 .today-news img {
     width: 100px;
@@ -557,12 +504,10 @@ button {
     border-radius: 10px;
 }
 
-
 .today-news h3 {
     font-size: 15px;
     line-height: 1.3;
 }
-
 
 .today-news small {
     display: block;
@@ -570,7 +515,6 @@ button {
     color: #999999;
     font-size: 12px;
 }
-
 
 .all-news {
     display: block;
@@ -581,7 +525,9 @@ button {
 }
 
 
-/* CANLI DURUM */
+/* ==================================================
+   CANLI DURUM
+================================================== */
 
 .status-item {
     width: 100%;
@@ -596,7 +542,6 @@ button {
     text-align: left;
 }
 
-
 .status-item > i:first-child {
     width: 35px;
     flex-shrink: 0;
@@ -605,18 +550,15 @@ button {
     font-size: 21px;
 }
 
-
 .status-item div {
     min-width: 0;
     flex: 1;
 }
 
-
 .status-item b {
     display: block;
     font-size: 14px;
 }
-
 
 .status-item small {
     display: block;
@@ -625,13 +567,11 @@ button {
     font-size: 11px;
 }
 
-
 .status-item > strong {
     flex-shrink: 0;
     color: var(--blue);
     font-size: 18px;
 }
-
 
 .status-action {
     transition:
@@ -639,14 +579,12 @@ button {
         padding .2s ease;
 }
 
-
 .status-action:hover {
     padding-left: 7px;
     padding-right: 7px;
     border-radius: 12px;
     background: var(--light-blue);
 }
-
 
 .status-arrow {
     width: auto !important;
@@ -656,11 +594,9 @@ button {
     transition: transform .25s ease;
 }
 
-
 .status-action.open .status-arrow {
     transform: rotate(180deg);
 }
-
 
 .data-button {
     width: 100%;
@@ -673,11 +609,9 @@ button {
     font-weight: 700;
 }
 
-
 .data-button i {
     margin-right: 6px;
 }
-
 
 .data-button:disabled {
     opacity: .65;
@@ -685,14 +619,15 @@ button {
 }
 
 
-/* ECZANE PANELİ */
+/* ==================================================
+   ECZANE PANELİ
+================================================== */
 
 .pharmacy-panel {
     margin-top: 20px;
     padding: 24px;
     border: 2px solid var(--border);
     border-radius: 25px;
-
     background:
         linear-gradient(
             135deg,
@@ -700,7 +635,6 @@ button {
             var(--cream)
         );
 }
-
 
 .pharmacy-panel-header {
     display: flex;
@@ -711,13 +645,11 @@ button {
     border-bottom: 3px solid var(--coral);
 }
 
-
 .pharmacy-panel-header h2 {
     margin-top: 5px;
     color: var(--navy);
     font-size: 24px;
 }
-
 
 .pharmacy-panel-header p {
     margin-top: 6px;
@@ -725,14 +657,12 @@ button {
     font-size: 13px;
 }
 
-
 .mini-title {
     color: var(--coral);
     font-size: 11px;
     font-weight: 900;
     letter-spacing: 1.5px;
 }
-
 
 .pharmacy-close {
     width: 38px;
@@ -745,14 +675,12 @@ button {
     font-size: 18px;
 }
 
-
 .pharmacy-list {
     display: grid;
     grid-template-columns: repeat(3,minmax(0,1fr));
     gap: 15px;
     margin-top: 20px;
 }
-
 
 .pharmacy-card {
     min-width: 0;
@@ -762,13 +690,11 @@ button {
     background: #ffffff;
 }
 
-
 .pharmacy-card-top {
     display: flex;
     align-items: flex-start;
     gap: 11px;
 }
-
 
 .pharmacy-card-icon {
     width: 40px;
@@ -782,13 +708,11 @@ button {
     color: var(--coral);
 }
 
-
 .pharmacy-card h3 {
     color: var(--navy);
     font-size: 16px;
     line-height: 1.25;
 }
-
 
 .pharmacy-district {
     display: inline-block;
@@ -798,14 +722,12 @@ button {
     font-weight: 700;
 }
 
-
 .pharmacy-address {
     margin-top: 13px;
     color: #555555;
     font-size: 13px;
     line-height: 1.45;
 }
-
 
 .pharmacy-phone {
     display: inline-flex;
@@ -817,7 +739,6 @@ button {
     font-weight: 700;
 }
 
-
 .pharmacy-source {
     margin-top: 18px;
     padding-top: 15px;
@@ -826,17 +747,14 @@ button {
     font-size: 11px;
 }
 
-
 .pharmacy-source a {
     color: var(--blue);
     font-weight: 800;
 }
 
-
 .pharmacy-source span {
     margin-left: 6px;
 }
-
 
 .loading-card {
     grid-column: 1 / -1;
@@ -849,20 +767,19 @@ button {
 }
 
 
-/* ÖNE ÇIKANLAR */
+/* ==================================================
+   ÖNE ÇIKANLAR
+================================================== */
 
 .featured-row {
     display: grid;
-
     grid-template-columns:
         minmax(0,1fr)
         minmax(300px,350px);
-
     align-items: start;
     gap: 20px;
     margin-top: 20px;
 }
-
 
 .featured-section,
 .earthquake,
@@ -872,13 +789,11 @@ button {
     padding: 20px;
 }
 
-
 .featured-grid {
     display: grid;
     grid-template-columns: repeat(3,minmax(0,1fr));
     gap: 18px;
 }
-
 
 .featured-card,
 .news-card {
@@ -888,18 +803,15 @@ button {
     background: #ffffff;
 }
 
-
 .image-wrapper {
     position: relative;
 }
-
 
 .image-wrapper img {
     width: 100%;
     height: 170px;
     object-fit: cover;
 }
-
 
 .image-wrapper span {
     position: absolute;
@@ -913,14 +825,12 @@ button {
     font-weight: 700;
 }
 
-
 .featured-card h3,
 .news-card h3 {
     padding: 12px 12px 0;
     font-size: 16px;
     line-height: 1.35;
 }
-
 
 .featured-card small,
 .news-card small {
@@ -930,7 +840,9 @@ button {
 }
 
 
-/* DEPREM */
+/* ==================================================
+   DEPREM
+================================================== */
 
 .live-data-badge {
     padding: 5px 9px;
@@ -941,7 +853,6 @@ button {
     font-weight: 900;
 }
 
-
 .quake {
     display: flex;
     align-items: center;
@@ -949,7 +860,6 @@ button {
     padding: 15px 0;
     border-bottom: 1px solid var(--border);
 }
-
 
 .quake > strong {
     width: 48px;
@@ -964,12 +874,10 @@ button {
     font-size: 18px;
 }
 
-
 .quake b {
     display: block;
     font-size: 14px;
 }
-
 
 .quake small {
     display: block;
@@ -977,7 +885,6 @@ button {
     color: #999999;
     font-size: 11px;
 }
-
 
 .earthquake button {
     width: 100%;
@@ -991,12 +898,13 @@ button {
 }
 
 
-/* HABERLER */
+/* ==================================================
+   HABERLER
+================================================== */
 
 .news-section {
     margin-top: 25px;
 }
-
 
 .categories {
     display: flex;
@@ -1005,7 +913,6 @@ button {
     overflow-x: auto;
 }
 
-
 .categories a {
     flex-shrink: 0;
     padding: 7px 14px;
@@ -1013,19 +920,16 @@ button {
     font-size: 13px;
 }
 
-
 .categories .active {
     background: var(--navy);
     color: #ffffff;
 }
-
 
 .news-grid {
     display: grid;
     grid-template-columns: repeat(4,minmax(0,1fr));
     gap: 18px;
 }
-
 
 .news-card img {
     width: 100%;
@@ -1034,7 +938,9 @@ button {
 }
 
 
-/* GALERİ + SOSYAL */
+/* ==================================================
+   GALERİ + SOSYAL
+================================================== */
 
 .middle-grid {
     display: grid;
@@ -1043,13 +949,11 @@ button {
     margin-top: 25px;
 }
 
-
 .gallery-content {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 15px;
 }
-
 
 .big-image {
     width: 100%;
@@ -1058,20 +962,17 @@ button {
     border-radius: 15px;
 }
 
-
 .small-images {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-
 .small-images > div {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 
 .small-images img {
     width: 95px;
@@ -1081,19 +982,16 @@ button {
     border-radius: 12px;
 }
 
-
 .small-images span {
     font-size: 13px;
     font-weight: 600;
 }
-
 
 .social-grid {
     display: grid;
     grid-template-columns: repeat(3,minmax(0,1fr));
     gap: 12px;
 }
-
 
 .social-grid article {
     min-height: 175px;
@@ -1102,12 +1000,10 @@ button {
     border-radius: 15px;
 }
 
-
 .social-grid b {
     color: var(--navy);
     font-size: 13px;
 }
-
 
 .social-grid hr {
     margin: 12px 0;
@@ -1115,12 +1011,10 @@ button {
     border-top: 1px solid var(--border);
 }
 
-
 .social-grid p {
     font-size: 14px;
     line-height: 1.5;
 }
-
 
 .social-grid small {
     display: block;
@@ -1129,7 +1023,9 @@ button {
 }
 
 
-/* PROMO */
+/* ==================================================
+   PROMO
+================================================== */
 
 .promo-grid {
     display: grid;
@@ -1137,7 +1033,6 @@ button {
     gap: 20px;
     margin: 40px 0;
 }
-
 
 .promo-card {
     min-height: 140px;
@@ -1149,17 +1044,14 @@ button {
     background: var(--cream);
 }
 
-
 .promo-card > i {
     color: var(--coral);
     font-size: 38px;
 }
 
-
 .promo-card div {
     flex: 1;
 }
-
 
 .promo-card h3 {
     margin-bottom: 7px;
@@ -1167,12 +1059,10 @@ button {
     font-size: 13px;
 }
 
-
 .promo-card p {
     font-size: 16px;
     font-weight: 700;
 }
-
 
 .promo-card > span {
     width: 35px;
@@ -1185,29 +1075,27 @@ button {
 }
 
 
-/* FOOTER */
+/* ==================================================
+   FOOTER
+================================================== */
 
 footer {
     padding: 45px 5%;
     display: grid;
-
     grid-template-columns:
         1.4fr
         1fr
         1fr
         1.2fr
         1.5fr;
-
     gap: 35px;
     background: var(--navy);
     color: #ffffff;
 }
 
-
 footer h3 {
     margin-bottom: 15px;
 }
-
 
 footer p,
 footer a {
@@ -1217,18 +1105,15 @@ footer a {
     font-size: 13px;
 }
 
-
 .footer-social i {
     margin-right: 15px;
     font-size: 24px;
 }
 
-
 .subscribe-form {
     display: flex;
     margin-top: 12px;
 }
-
 
 .subscribe-form input {
     min-width: 0;
@@ -1239,7 +1124,6 @@ footer a {
     outline: none;
 }
 
-
 .subscribe-form button {
     width: 45px;
     border: 0;
@@ -1249,7 +1133,9 @@ footer a {
 }
 
 
-/* TABLET */
+/* ==================================================
+   TABLET
+================================================== */
 
 @media (max-width: 1250px) {
 
@@ -1258,46 +1144,40 @@ footer a {
         padding: 25px 0;
     }
 
-
     .header-info {
         margin-left: 0;
     }
-
 
     .top-grid {
         grid-template-columns: 1fr 1fr;
     }
 
-
     .main-news {
         grid-column: span 2;
     }
 
-
     .featured-row {
         grid-template-columns: 1fr;
     }
-
 
     .news-grid,
     .pharmacy-list {
         grid-template-columns: repeat(2,1fr);
     }
 
-
     .middle-grid {
         grid-template-columns: 1fr;
     }
 
-
     footer {
         grid-template-columns: repeat(2,1fr);
     }
-
 }
 
 
-/* MOBİL */
+/* ==================================================
+   MOBİL
+================================================== */
 
 @media (max-width: 800px) {
 
@@ -1308,12 +1188,10 @@ footer a {
         height: 54px;
     }
 
-
     .live-label {
         padding: 0 18px;
         font-size: 15px;
     }
-
 
     .breaking {
         min-width: 350px;
@@ -1321,16 +1199,18 @@ footer a {
         font-size: 13px;
     }
 
-
     .header {
         align-items: flex-start;
     }
 
+    /* Antalya logosu tablet / mobil */
+    .logo-image-area .site-logo {
+        width: 155px;
+    }
 
     .header-info {
         width: 100%;
     }
-
 
     .weather,
     .sea {
@@ -1338,38 +1218,31 @@ footer a {
         border: 0;
     }
 
-
     .social-header {
         width: 100%;
     }
-
 
     .navbar {
         border-radius: 15px;
     }
 
-
     .navbar .newsletter {
         margin-left: 0;
     }
 
-
     .top-grid {
         grid-template-columns: 1fr;
     }
-
 
     .main-news {
         grid-column: auto;
         min-height: 520px;
     }
 
-
     .main-news-content {
         bottom: 75px;
         padding-right: 0;
     }
-
 
     .featured-grid,
     .news-grid,
@@ -1379,20 +1252,19 @@ footer a {
         grid-template-columns: 1fr;
     }
 
-
     .gallery-content {
         grid-template-columns: 1fr;
     }
 
-
     footer {
         grid-template-columns: 1fr;
     }
-
 }
 
 
-/* KÜÇÜK TELEFON */
+/* ==================================================
+   KÜÇÜK TELEFON
+================================================== */
 
 @media (max-width: 500px) {
 
@@ -1402,34 +1274,19 @@ footer a {
         width: 92%;
     }
 
-
     .container {
         margin-top: 25px;
     }
 
-
-    .logo-icon {
-        width: 58px;
-        height: 58px;
-        font-size: 27px;
+    /* Antalya logosu telefon */
+    .logo-image-area .site-logo {
+        width: 140px;
     }
-
-
-    .logo-text strong {
-        font-size: 27px;
-    }
-
-
-    .logo-text span {
-        font-size: 12px;
-    }
-
 
     .main-news {
         min-height: 470px;
         border-radius: 18px;
     }
-
 
     .main-news-content {
         left: 17px;
@@ -1438,11 +1295,9 @@ footer a {
         padding-right: 0;
     }
 
-
     .main-news-content h1 {
         font-size: 28px;
     }
-
 
     .today-box,
     .status-box,
@@ -1455,16 +1310,13 @@ footer a {
         border-radius: 18px;
     }
 
-
     .pharmacy-panel {
         padding: 17px;
     }
 
-
     .pharmacy-panel-header h2 {
         font-size: 20px;
     }
-
 
     .pharmacy-source span {
         display: block;
@@ -1472,9 +1324,7 @@ footer a {
         margin-left: 0;
     }
 
-
     .big-image {
         height: 220px;
     }
-
 }
