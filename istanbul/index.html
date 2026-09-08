@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="İstanbul Haber Merkezi - İstanbul'dan son dakika haberleri, gündem, ulaşım, yaşam, kültür ve ilçe haberleri."
+    >
+
+    <title>İstanbul Haber Merkezi</title>
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     CANLI HABER ŞERİDİ
+================================================== -->
+
+<div class="live-bar">
+
+    <div class="live-label">
+
+        <span class="live-dot"></span>
+
+        CANLI
+
+    </div>
+
+
+    <div class="ticker-window">
+
+        <div class="ticker-track">
+
+
+            <div class="ticker-group">
+
+                <div class="breaking">
+
+                    <small>09:20</small>
+
+                    İstanbul'da günün gelişmeleri İstanbul Haber Merkezi'nde
+
+                </div>
+
+
+                <div class="breaking">
+
+                    <small>10:05</small>
+
+                    İstanbul ulaşımından son gelişmeler
+
+                </div>
+
+
+                <div class="breaking">
+
+                    <small>11:30</small>
+
+                    İstanbul'un ilçelerinden haberler
+
+                </div>
+
+
+                <div class="breaking">
+
+                    <small>12:15</small>
+
+                    Şehir gündemindeki gelişmeler yakından takip ediliyor
+
+                </div>
+
+            </div>
+
+
+            <!-- KESİNTİSİZ KAYMA İÇİN TEKRAR -->
+
+            <div
+                class="ticker-group"
+                aria-hidden="true"
+            >
+
+                <div class="breaking">
+
+                    <small>09:20</small>
+
+                    İstanbul'da günün gelişmeleri İstanbul Haber Merkezi'nde
+
+                </div>
+
+
+                <div class="breaking">
+
+                    <small>10:05</small>
+
+                    İstanbul ulaşımından son gelişmeler
+
+                </div>
+
+
+                <div class="breaking">
+
+                    <small>11:30</small>
+
+                    İstanbul'un ilçelerinden haberler
+
+                </div>
+
+
+                <div class="breaking">
+
+                    <small>12:15</small>
+
+                    Şehir gündemindeki gelişmeler yakından takip ediliyor
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header class="header">
+
+
+    <a
+        href="#"
+        class="logo-area"
+    >
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-city"></i>
+
+        </div>
+
+
+        <div class="logo-text">
+
+            <strong>İSTANBUL</strong>
+
+            <span>HABER MERKEZİ</span>
+
+            <small>
+                Şehrin nabzı burada atıyor.
+            </small>
+
+        </div>
+
+    </a>
+
+
+    <!-- CANLI HAVA -->
+
+    <div class="header-info">
+
+
+        <div class="weather">
+
+            <i
+                id="header-weather-icon"
+                class="fa-solid fa-cloud-sun"
+            ></i>
+
+
+            <div>
+
+                <strong id="header-temperature">
+                    —°
+                </strong>
+
+                <span>
+                    İstanbul
+                </span>
+
+                <small id="header-weather-text">
+                    Hava durumu yükleniyor...
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="sea">
+
+            <i class="fa-solid fa-wind"></i>
+
+
+            <div>
+
+                <p>
+
+                    Nem
+
+                    <b id="header-humidity">
+                        —%
+                    </b>
+
+                </p>
+
+
+                <p>
+
+                    Rüzgâr
+
+                    <b id="header-wind">
+                        — km/s
+                    </b>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="social-header">
+
+        <a
+            href="#"
+            aria-label="Instagram"
+        >
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+
+        <a
+            href="#"
+            aria-label="X"
+        >
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+
+        <a
+            href="#"
+            aria-label="Facebook"
+        >
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+
+        <a
+            href="#"
+            aria-label="YouTube"
+        >
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+
+
+        <button
+            type="button"
+            class="search-button"
+            aria-label="Haberlerde ara"
+        >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+    </div>
+
+
+</header>
+
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<nav class="navbar">
+
+
+    <a
+        href="#"
+        class="home"
+        aria-label="Ana Sayfa"
+    >
+
+        <i class="fa-solid fa-house"></i>
+
+    </a>
+
+
+    <a href="#">GÜNDEM</a>
+
+    <a href="#">İSTANBUL</a>
+
+    <a href="#">BEYOĞLU</a>
+
+    <a href="#">KADIKÖY</a>
+
+    <a href="#">BEŞİKTAŞ</a>
+
+    <a href="#">ÜSKÜDAR</a>
+
+    <a href="#">ULAŞIM</a>
+
+    <a href="#">BELEDİYE</a>
+
+    <a href="#">KÜLTÜR</a>
+
+    <a href="#">YAŞAM</a>
+
+
+    <a
+        href="#"
+        class="newsletter"
+    >
+
+        BÜLTENE KATIL
+
+        <i class="fa-regular fa-envelope"></i>
+
+    </a>
+
+
+</nav>
+
+
+<!-- ==================================================
+     ANA İÇERİK
+================================================== -->
+
+<main class="container">
+
+
+<!-- ==================================================
+     ÜST BÖLÜM
+================================================== -->
+
+<section class="top-grid">
+
+
+    <!-- ANA HABER -->
+
+    <article class="main-news">
+
+
+        <img
+            src="./istanbul.jpeg"
+            alt="İstanbul şehir manzarası"
+        >
+
+
+        <div class="overlay"></div>
+
+
+        <span class="news-label">
+
+            Gelişen Olay
+
+        </span>
+
+
+        <div class="main-news-content">
+
+            <h1>
+
+                İstanbul gündeminden son gelişmeler
+
+            </h1>
+
+
+            <p>
+
+                İstanbul'un ulaşım, yaşam, belediye,
+                kültür ve ilçe gündemindeki gelişmeler
+                İstanbul Haber Merkezi'nde.
+
+            </p>
+
+        </div>
+
+
+        <div class="slider-buttons">
+
+            <button
+                type="button"
+                aria-label="Önceki haber"
+            >
+                ←
+            </button>
+
+
+            <button
+                type="button"
+                aria-label="Sonraki haber"
+            >
+                →
+            </button>
+
+        </div>
+
+
+    </article>
+
+
+    <!-- ==================================================
+         İSTANBUL'DA BUGÜN
+    ================================================== -->
+
+    <section class="today-box">
+
+
+        <div class="box-title">
+
+            <h2>
+                İSTANBUL'DA BUGÜN
+            </h2>
+
+        </div>
+
+
+        <article class="today-news">
+
+            <img
+                src="./istanbul1.jpeg"
+                alt="İstanbul"
+            >
+
+
+            <div>
+
+                <h3>
+                    İstanbul'un şehir gündeminden gelişmeler
+                </h3>
+
+                <small>
+                    Güncel
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <article class="today-news">
+
+            <img
+                src="./istanbul2.jpeg"
+                alt="İstanbul ulaşım"
+            >
+
+
+            <div>
+
+                <h3>
+                    Ulaşım gündemindeki son gelişmeler
+                </h3>
+
+                <small>
+                    Güncel
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <article class="today-news">
+
+            <img
+                src="./istanbul3.jpeg"
+                alt="İstanbul Boğazı"
+            >
+
+
+            <div>
+
+                <h3>
+                    Boğaz ve sahil hattından gelişmeler
+                </h3>
+
+                <small>
+                    Güncel
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <article class="today-news">
+
+            <img
+                src="./istanbul4.jpeg"
+                alt="İstanbul şehir merkezi"
+            >
+
+
+            <div>
+
+                <h3>
+                    İstanbul'un ilçelerinden son haberler
+                </h3>
+
+                <small>
+                    Güncel
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <a
+            href="#"
+            class="all-news"
+        >
+
+            Tüm Haberler →
+
+        </a>
+
+
+    </section>
+
+
+    <!-- ==================================================
+         ŞİMDİ İSTANBUL'DA
+    ================================================== -->
+
+    <section class="status-box">
+
+
+        <div class="box-title">
+
+            <h2>
+                ŞİMDİ İSTANBUL'DA
+            </h2>
+
+        </div>
+
+
+        <!-- TRAFİK -->
+
+        <div class="status-item">
+
+            <i class="fa-solid fa-car-side"></i>
+
+
+            <div>
+
+                <b>
+                    Trafik Yoğunluğu
+                </b>
+
+                <small>
+                    Canlı bağlantı hazırlanıyor
+                </small>
+
+            </div>
+
+
+            <strong>
+                —
+            </strong>
+
+        </div>
+
+
+        <!-- SICAKLIK -->
+
+        <div class="status-item">
+
+            <i class="fa-solid fa-temperature-half"></i>
+
+
+            <div>
+
+                <b>
+                    Hava Sıcaklığı
+                </b>
+
+                <small id="weather-description">
+                    Yükleniyor...
+                </small>
+
+            </div>
+
+
+            <strong id="istanbul-temperature">
+                —°
+            </strong>
+
+        </div>
+
+
+        <!-- NEM -->
+
+        <div class="status-item">
+
+            <i class="fa-solid fa-droplet"></i>
+
+
+            <div>
+
+                <b>
+                    Nem
+                </b>
+
+                <small>
+                    İstanbul
+                </small>
+
+            </div>
+
+
+            <strong id="istanbul-humidity">
+                —%
+            </strong>
+
+        </div>
+
+
+        <!-- RÜZGÂR -->
+
+        <div class="status-item">
+
+            <i class="fa-solid fa-wind"></i>
+
+
+            <div>
+
+                <b>
+                    Rüzgâr
+                </b>
+
+                <small>
+                    İstanbul
+                </small>
+
+            </div>
+
+
+            <strong id="istanbul-wind">
+                — km/s
+            </strong>
+
+        </div>
+
+
+        <!-- NÖBETÇİ ECZANELER -->
+
+        <button
+            type="button"
+            class="status-item status-action"
+            id="pharmacy-toggle"
+            aria-expanded="false"
+        >
+
+            <i class="fa-solid fa-prescription-bottle-medical"></i>
+
+
+            <div>
+
+                <b>
+                    Nöbetçi Eczaneler
+                </b>
+
+                <small id="pharmacy-subtitle">
+                    İstanbul verisi yükleniyor...
+                </small>
+
+            </div>
+
+
+            <strong id="pharmacy-count">
+                —
+            </strong>
+
+
+            <i class="fa-solid fa-chevron-down status-arrow"></i>
+
+        </button>
+
+
+        <!-- VAPUR -->
+
+        <a
+            class="status-item status-action"
+            href="https://sehirhatlari.istanbul/tr/seferler/ic-hatlar"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <i class="fa-solid fa-ship"></i>
+
+
+            <div>
+
+                <b>
+                    Vapur Seferleri
+                </b>
+
+                <small>
+                    Şehir Hatları resmî tarifesi
+                </small>
+
+            </div>
+
+
+            <strong class="link-value">
+                Gör →
+            </strong>
+
+        </a>
+
+
+        <!-- METRO -->
+
+        <a
+            class="status-item status-action"
+            href="https://www.metro.istanbul/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <i class="fa-solid fa-train-subway"></i>
+
+
+            <div>
+
+                <b>
+                    Metro İstanbul
+                </b>
+
+                <small>
+                    Hat ve servis durumları
+                </small>
+
+            </div>
+
+
+            <strong class="link-value">
+                Gör →
+            </strong>
+
+        </a>
+
+
+        <!-- DOLAR -->
+
+        <div class="status-item">
+
+            <i class="fa-solid fa-dollar-sign"></i>
+
+
+            <div>
+
+                <b>
+                    Dolar / TL
+                </b>
+
+                <small id="currency-source">
+                    TCMB
+                </small>
+
+            </div>
+
+
+            <strong id="usd-try">
+                — ₺
+            </strong>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="data-button"
+            id="refresh-all-data"
+        >
+
+            <i class="fa-solid fa-rotate"></i>
+
+            Verileri Yenile
+
+        </button>
+
+
+    </section>
+
+
+</section>
+
+
+<!-- ==================================================
+     NÖBETÇİ ECZANE PANELİ
+================================================== -->
+
+<section
+    class="pharmacy-panel"
+    id="pharmacy-panel"
+    hidden
+>
+
+
+    <div class="pharmacy-panel-header">
+
+        <div>
+
+            <span class="mini-title">
+                CANLI VERİ
+            </span>
+
+            <h2>
+                İstanbul Nöbetçi Eczaneleri
+            </h2>
+
+            <p id="pharmacy-panel-description">
+                Bugün açık nöbetçi eczaneler yükleniyor...
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="pharmacy-close"
+            id="pharmacy-close"
+            aria-label="Eczane listesini kapat"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <div
+        class="pharmacy-list"
+        id="pharmacy-list"
+    >
+
+        <div class="loading-card">
+
+            <i class="fa-solid fa-spinner fa-spin"></i>
+
+            Eczaneler yükleniyor...
+
+        </div>
+
+    </div>
+
+
+    <div class="pharmacy-source">
+
+        Veri:
+
+        <a
+            href="https://eczaneadresi.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Eczane Adresi
+        </a>
+
+        <span>
+            • Yola çıkmadan önce telefonla teyit etmeniz önerilir.
+        </span>
+
+    </div>
+
+
+</section>
+
+
+<!-- ==================================================
+     ÖNE ÇIKANLAR + SON DEPREMLER
+================================================== -->
+
+<section class="featured-row">
+
+
+    <section class="featured-section">
+
+
+        <div class="section-title">
+
+            <h2>
+                ÖNE ÇIKANLAR
+            </h2>
+
+            <a href="#">
+                Tümünü Gör →
+            </a>
+
+        </div>
+
+
+        <div class="featured-grid">
+
+
+            <article class="featured-card">
+
+                <div class="image-wrapper">
+
+                    <img
+                        src="./istanbul5.jpeg"
+                        alt="Kadıköy"
+                    >
+
+                    <span>
+                        KADIKÖY
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Kadıköy'den güncel gelişmeler
+                </h3>
+
+
+                <small>
+                    İstanbul Haber Merkezi
+                </small>
+
+            </article>
+
+
+            <article class="featured-card">
+
+                <div class="image-wrapper">
+
+                    <img
+                        src="./istanbul6.jpeg"
+                        alt="Beyoğlu"
+                    >
+
+                    <span>
+                        BEYOĞLU
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Beyoğlu'nun kültür ve yaşam gündemi
+                </h3>
+
+
+                <small>
+                    İstanbul Haber Merkezi
+                </small>
+
+            </article>
+
+
+            <article class="featured-card">
+
+                <div class="image-wrapper">
+
+                    <img
+                        src="./istanbul7.jpeg"
+                        alt="Beşiktaş"
+                    >
+
+                    <span>
+                        BEŞİKTAŞ
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Beşiktaş'tan şehir yaşamına dair gelişmeler
+                </h3>
+
+
+                <small>
+                    İstanbul Haber Merkezi
+                </small>
+
+            </article>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- SON DEPREMLER -->
+
+    <aside class="earthquake">
+
+
+        <div class="section-title">
+
+            <h2>
+                SON DEPREMLER
+            </h2>
+
+
+            <span class="live-data-badge">
+
+                CANLI
+
+            </span>
+
+        </div>
+
+
+        <div id="earthquake-list">
+
+            <div class="quake">
+
+                <strong>
+                    —
+                </strong>
+
+
+                <div>
+
+                    <b>
+                        Deprem verileri yükleniyor...
+                    </b>
+
+                    <small>
+                        AFAD
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="refresh-earthquakes"
+        >
+
+            Yenile ↻
+
+        </button>
+
+
+    </aside>
+
+
+</section>
+
+
+<!-- ==================================================
+     İSTANBUL'DAN HABERLER
+================================================== -->
+
+<section class="news-section">
+
+
+    <div class="section-title">
+
+        <h2>
+            İSTANBUL'DAN HABERLER
+        </h2>
+
+        <a href="#">
+            Tümünü Gör →
+        </a>
+
+    </div>
+
+
+    <div class="categories">
+
+        <a
+            href="#"
+            class="active"
+        >
+            Tümü
+        </a>
+
+        <a href="#">
+            Kadıköy
+        </a>
+
+        <a href="#">
+            Beyoğlu
+        </a>
+
+        <a href="#">
+            Beşiktaş
+        </a>
+
+        <a href="#">
+            Üsküdar
+        </a>
+
+        <a href="#">
+            Bakırköy
+        </a>
+
+        <a href="#">
+            Sarıyer
+        </a>
+
+        <a href="#">
+            Ulaşım
+        </a>
+
+    </div>
+
+
+    <div class="news-grid">
+
+
+        <article class="news-card">
+
+            <img
+                src="./istanbul8.jpeg"
+                alt="Üsküdar"
+            >
+
+            <h3>
+                Üsküdar'dan şehir gündemine dair gelişmeler
+            </h3>
+
+            <small>
+                İstanbul Haber Merkezi
+            </small>
+
+        </article>
+
+
+        <article class="news-card">
+
+            <img
+                src="./istanbul9.jpeg"
+                alt="İstanbul ulaşım"
+            >
+
+            <h3>
+                İstanbul ulaşım gündemindeki gelişmeler
+            </h3>
+
+            <small>
+                İstanbul Haber Merkezi
+            </small>
+
+        </article>
+
+
+        <article class="news-card">
+
+            <img
+                src="./istanbul10.jpeg"
+                alt="Sarıyer"
+            >
+
+            <h3>
+                Sarıyer'den güncel haberler
+            </h3>
+
+            <small>
+                İstanbul Haber Merkezi
+            </small>
+
+        </article>
+
+
+        <article class="news-card">
+
+            <img
+                src="./istanbul11.jpeg"
+                alt="İstanbul"
+            >
+
+            <h3>
+                İstanbul'un farklı ilçelerinden son gelişmeler
+            </h3>
+
+            <small>
+                İstanbul Haber Merkezi
+            </small>
+
+        </article>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- ==================================================
+     GALERİ + SOSYAL
+================================================== -->
+
+<section class="middle-grid">
+
+
+    <section class="gallery">
+
+
+        <div class="section-title">
+
+            <h2>
+                İSTANBUL'DAN GÖRÜNTÜLER
+            </h2>
+
+            <a href="#">
+                Tümünü Gör →
+            </a>
+
+        </div>
+
+
+        <div class="gallery-content">
+
+
+            <img
+                class="big-image"
+                src="./istanbul12.jpeg"
+                alt="İstanbul manzarası"
+            >
+
+
+            <div class="small-images">
+
+
+                <div>
+
+                    <img
+                        src="./istanbul13.jpeg"
+                        alt="İstanbul"
+                    >
+
+                    <span>
+                        İstanbul'dan şehir manzaraları
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <img
+                        src="./istanbul14.jpeg"
+                        alt="İstanbul Boğazı"
+                    >
+
+                    <span>
+                        Boğazdan günün görüntüsü
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <img
+                        src="./istanbul.jpeg"
+                        alt="İstanbul genel görünüm"
+                    >
+
+                    <span>
+                        İstanbul'dan günün karesi
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- SOSYAL -->
+
+    <section class="social">
+
+
+        <div class="section-title">
+
+            <h2>
+                SOSYAL'DE İSTANBUL
+            </h2>
+
+            <a href="#">
+                Tümünü Gör →
+            </a>
+
+        </div>
+
+
+        <div class="social-grid">
+
+
+            <article>
+
+                <b>
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                    @istanbulhabermrkz
+
+                </b>
+
+
+                <hr>
+
+
+                <p>
+                    İstanbul'dan günün en güzel kareleri.
+                </p>
+
+
+                <small>
+                    Instagram
+                </small>
+
+            </article>
+
+
+            <article>
+
+                <b>
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                    @istanbulhabermrkz
+
+                </b>
+
+
+                <hr>
+
+
+                <p>
+                    İstanbul'daki gelişmeleri takip edin.
+                </p>
+
+
+                <small>
+                    X
+                </small>
+
+            </article>
+
+
+            <article>
+
+                <b>
+
+                    <i class="fa-brands fa-facebook"></i>
+
+                    İstanbul Haber Merkezi
+
+                </b>
+
+
+                <hr>
+
+
+                <p>
+                    Şehrin gündeminden gelişmeler.
+                </p>
+
+
+                <small>
+                    Facebook
+                </small>
+
+            </article>
+
+
+        </div>
+
+
+    </section>
+
+
+</section>
+
+
+<!-- ==================================================
+     PROMO
+================================================== -->
+
+<section class="promo-grid">
+
+
+    <a
+        href="#"
+        class="promo-card"
+    >
+
+        <i class="fa-solid fa-file-lines"></i>
+
+
+        <div>
+
+            <h3>
+                HAFTANIN DOSYASI
+            </h3>
+
+            <p>
+                İstanbul gündeminden özel dosyalar
+            </p>
+
+        </div>
+
+
+        <span>
+            →
+        </span>
+
+    </a>
+
+
+    <a
+        href="#"
+        class="promo-card"
+    >
+
+        <i class="fa-solid fa-map-location-dot"></i>
+
+
+        <div>
+
+            <h3>
+                İSTANBUL REHBERİ
+            </h3>
+
+            <p>
+                İlçeler, tarihi alanlar ve şehir yaşamı
+            </p>
+
+        </div>
+
+
+        <span>
+            →
+        </span>
+
+    </a>
+
+
+    <a
+        href="#"
+        class="promo-card"
+    >
+
+        <i class="fa-solid fa-camera"></i>
+
+
+        <div>
+
+            <h3>
+                FOTO GALERİ
+            </h3>
+
+            <p>
+                İstanbul'un en güzel kareleri
+            </p>
+
+        </div>
+
+
+        <span>
+            →
+        </span>
+
+    </a>
+
+
+</section>
+
+
+</main>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+
+    <div class="footer-brand">
+
+        <h3>
+            İstanbul Haber Merkezi
+        </h3>
+
+        <p>
+            Şehrin nabzı burada atıyor.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Kurumsal
+        </h3>
+
+        <a href="#">
+            Hakkımızda
+        </a>
+
+        <a href="#">
+            Ekibimiz
+        </a>
+
+        <a href="#">
+            İletişim
+        </a>
+
+        <a href="#">
+            Künye
+        </a>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Kategoriler
+        </h3>
+
+        <a href="#">
+            Gündem
+        </a>
+
+        <a href="#">
+            Ulaşım
+        </a>
+
+        <a href="#">
+            Yaşam
+        </a>
+
+        <a href="#">
+            Belediye
+        </a>
+
+    </div>
+
+
+    <div class="footer-social">
+
+        <h3>
+            BİZİ TAKİP EDİN
+        </h3>
+
+
+        <div>
+
+            <i class="fa-brands fa-instagram"></i>
+
+            <i class="fa-brands fa-x-twitter"></i>
+
+            <i class="fa-brands fa-facebook"></i>
+
+            <i class="fa-brands fa-youtube"></i>
+
+        </div>
+
+    </div>
+
+
+    <div class="subscribe">
+
+        <h3>
+            BÜLTENE KATILIN
+        </h3>
+
+        <p>
+            İstanbul'dan haberiniz olsun
+        </p>
+
+
+        <div class="subscribe-form">
+
+            <input
+                type="email"
+                placeholder="E-posta adresiniz"
+                aria-label="E-posta adresiniz"
+            >
+
+
+            <button
+                type="button"
+                aria-label="Bültene katıl"
+            >
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+</footer>
+
+
+<script src="./script.js"></script>
+
+
+</body>
+
+</html>

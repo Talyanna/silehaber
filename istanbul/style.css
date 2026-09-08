@@ -1,0 +1,1521 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --navy: #4a1730;
+    --dark-blue: #321020;
+    --blue: #8e2f49;
+    --light-blue: #f8ecef;
+    --border: #ead9de;
+    --text: #181317;
+    --gray: #74686d;
+    --green: #138a63;
+    --red: #d56a3b;
+    --cream: #fbf7f4;
+    --gold: #c89a56;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--text);
+    background: #ffffff;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ==================================================
+   CANLI ŞERİT
+================================================== */
+
+.live-bar {
+    width: 100%;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--navy);
+    color: #ffffff;
+}
+
+
+.live-label {
+    position: relative;
+    z-index: 10;
+    height: 62px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    background: var(--red);
+    font-size: 18px;
+    font-weight: 900;
+    box-shadow: 8px 0 18px rgba(0,0,0,.16);
+}
+
+
+.live-dot {
+    width: 11px;
+    height: 11px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #ffffff;
+    animation: livePulse 1.4s infinite;
+}
+
+
+.ticker-window {
+    flex: 1;
+    height: 62px;
+    overflow: hidden;
+}
+
+
+.ticker-track {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    animation: tickerMove 28s linear infinite;
+    will-change: transform;
+}
+
+
+.ticker-group {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+
+.breaking {
+    height: 62px;
+    min-width: 410px;
+    padding: 0 26px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    border-right: 1px solid rgba(255,255,255,.18);
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+
+.breaking small {
+    margin-right: 9px;
+    color: #efc5cf;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+@keyframes tickerMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+@keyframes livePulse {
+
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .45;
+        transform: scale(.75);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+.ticker-window:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+    width: 94%;
+    max-width: 1650px;
+    min-height: 155px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+
+.logo-icon {
+    width: 72px;
+    height: 72px;
+    margin-right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: var(--light-blue);
+    color: var(--navy);
+    font-size: 34px;
+}
+
+
+.logo-text strong {
+    display: block;
+    color: var(--navy);
+    font-size: 35px;
+    font-weight: 900;
+    line-height: .95;
+}
+
+
+.logo-text span {
+    display: block;
+    margin-top: 4px;
+    color: var(--red);
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+
+.logo-text small {
+    display: block;
+    margin-top: 5px;
+    color: var(--gray);
+    font-size: 10px;
+}
+
+
+.header-info {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.weather,
+.sea {
+    min-height: 70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-right: 1px solid var(--border);
+}
+
+
+.weather > i,
+.sea > i {
+    color: var(--gold);
+    font-size: 38px;
+}
+
+
+.weather strong {
+    display: block;
+    color: var(--navy);
+    font-size: 34px;
+}
+
+
+.weather span {
+    display: block;
+    font-size: 15px;
+}
+
+
+.weather small {
+    color: #999999;
+}
+
+
+.sea p {
+    color: #777777;
+    font-size: 15px;
+}
+
+
+.sea b {
+    color: var(--navy);
+    font-size: 18px;
+}
+
+
+.social-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--navy);
+    font-size: 23px;
+}
+
+
+.social-header a {
+    transition: .2s ease;
+}
+
+
+.social-header a:hover {
+    color: var(--red);
+    transform: translateY(-2px);
+}
+
+
+.search-button {
+    border: 0;
+    background: transparent;
+    color: var(--navy);
+    font-size: 22px;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar {
+    width: 94%;
+    max-width: 1650px;
+    min-height: 62px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    border-radius: 35px;
+    background:
+        linear-gradient(
+            90deg,
+            #3b1025,
+            #8e2f49,
+            #c46655
+        );
+}
+
+
+.navbar a {
+    flex-shrink: 0;
+    padding: 20px 14px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.navbar a:hover {
+    background: rgba(255,255,255,.12);
+}
+
+
+.navbar .home {
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,.14);
+    font-size: 22px;
+}
+
+
+.navbar .newsletter {
+    margin-left: auto;
+    margin-right: 5px;
+    border-radius: 30px;
+    background: var(--dark-blue);
+}
+
+
+/* ==================================================
+   ANA ALAN
+================================================== */
+
+.container {
+    width: 94%;
+    max-width: 1650px;
+    margin: 45px auto;
+}
+
+
+.top-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(300px, 1fr)
+        minmax(300px, 1fr);
+    gap: 20px;
+}
+
+
+/* ==================================================
+   ANA HABER
+================================================== */
+
+.main-news {
+    position: relative;
+    min-height: 660px;
+    overflow: hidden;
+    border: 2px solid var(--border);
+    border-radius: 25px;
+    background: #222222;
+}
+
+
+.main-news > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 25%,
+            rgba(50,16,32,.96)
+        );
+}
+
+
+.news-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 9px 18px;
+    border-radius: 25px;
+    background: var(--red);
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+.main-news-content {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 30px;
+    padding-right: 80px;
+    color: #ffffff;
+}
+
+
+.main-news-content h1 {
+    margin-bottom: 12px;
+    font-size: clamp(30px,3vw,45px);
+    font-weight: 900;
+    line-height: 1.15;
+}
+
+
+.main-news-content p {
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+
+.slider-buttons {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    gap: 7px;
+}
+
+
+.slider-buttons button {
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--red);
+    color: #ffffff;
+}
+
+
+/* ==================================================
+   ORTAK KUTULAR
+================================================== */
+
+.today-box,
+.status-box,
+.featured-section,
+.earthquake,
+.news-section,
+.gallery,
+.social {
+    border: 2px solid var(--border);
+    border-radius: 25px;
+    background: #ffffff;
+}
+
+
+.today-box,
+.status-box {
+    padding: 15px;
+}
+
+
+.box-title,
+.section-title {
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 3px solid var(--red);
+}
+
+
+.box-title h2,
+.section-title h2 {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+
+.section-title a {
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   BUGÜN
+================================================== */
+
+.today-news {
+    display: flex;
+    gap: 12px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+
+.today-news img {
+    width: 100px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.today-news h3 {
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+
+.today-news small {
+    display: block;
+    margin-top: 7px;
+    color: #999999;
+    font-size: 12px;
+}
+
+
+.all-news {
+    display: block;
+    padding: 13px 5px 5px;
+    color: var(--blue);
+    text-align: right;
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   ŞİMDİ İSTANBUL'DA
+================================================== */
+
+.status-item {
+    width: 100%;
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    text-align: left;
+}
+
+
+.status-item > i:first-child {
+    width: 35px;
+    flex-shrink: 0;
+    color: var(--gold);
+    text-align: center;
+    font-size: 21px;
+}
+
+
+.status-item div {
+    min-width: 0;
+    flex: 1;
+}
+
+
+.status-item b {
+    display: block;
+    font-size: 14px;
+}
+
+
+.status-item small {
+    display: block;
+    margin-top: 2px;
+    color: #999999;
+    font-size: 11px;
+}
+
+
+.status-item > strong {
+    flex-shrink: 0;
+    color: var(--blue);
+    font-size: 18px;
+}
+
+
+.status-action {
+    transition:
+        background .2s ease,
+        padding .2s ease;
+}
+
+
+.status-action:hover {
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 12px;
+    background: var(--light-blue);
+}
+
+
+.status-arrow {
+    width: auto !important;
+    margin-left: 3px;
+    color: var(--blue) !important;
+    font-size: 12px !important;
+    transition: transform .25s ease;
+}
+
+
+.status-action.open .status-arrow {
+    transform: rotate(180deg);
+}
+
+
+.link-value {
+    color: var(--blue) !important;
+    font-size: 13px !important;
+}
+
+
+.data-button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border: 0;
+    border-radius: 25px;
+    background: var(--navy);
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+.data-button i {
+    margin-right: 6px;
+}
+
+
+/* ==================================================
+   NÖBETÇİ ECZANE PANELİ
+================================================== */
+
+.pharmacy-panel {
+    margin-top: 20px;
+    padding: 24px;
+    border: 2px solid var(--border);
+    border-radius: 25px;
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            var(--cream)
+        );
+}
+
+
+.pharmacy-panel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 17px;
+    border-bottom: 3px solid var(--red);
+}
+
+
+.pharmacy-panel-header h2 {
+    margin-top: 5px;
+    color: var(--navy);
+    font-size: 24px;
+}
+
+
+.pharmacy-panel-header p {
+    margin-top: 6px;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+
+.mini-title {
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+
+.pharmacy-close {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--light-blue);
+    color: var(--navy);
+    font-size: 18px;
+}
+
+
+.pharmacy-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.pharmacy-card {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    background: #ffffff;
+}
+
+
+.pharmacy-card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+
+.pharmacy-card-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: var(--light-blue);
+    color: var(--red);
+}
+
+
+.pharmacy-card h3 {
+    color: var(--navy);
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+
+.pharmacy-district {
+    display: inline-block;
+    margin-top: 4px;
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.pharmacy-address {
+    margin-top: 13px;
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+
+.pharmacy-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.pharmacy-source {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+    color: var(--gray);
+    font-size: 11px;
+}
+
+
+.pharmacy-source a {
+    color: var(--blue);
+    font-weight: 800;
+}
+
+
+.pharmacy-source span {
+    margin-left: 6px;
+}
+
+
+.loading-card {
+    grid-column: 1 / -1;
+    padding: 25px;
+    border-radius: 16px;
+    background: var(--light-blue);
+    color: var(--navy);
+    text-align: center;
+    font-weight: 700;
+}
+
+
+.loading-card i {
+    margin-right: 8px;
+}
+
+
+/* ==================================================
+   ÖNE ÇIKANLAR
+================================================== */
+
+.featured-row {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(300px, 350px);
+    align-items: start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+.featured-section,
+.earthquake,
+.news-section,
+.gallery,
+.social {
+    padding: 20px;
+}
+
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+.featured-card,
+.news-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+
+.image-wrapper {
+    position: relative;
+}
+
+
+.image-wrapper img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+
+.image-wrapper span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: var(--red);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.featured-card h3,
+.news-card h3 {
+    padding: 12px 12px 0;
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+
+.featured-card small,
+.news-card small {
+    display: block;
+    padding: 10px 12px 13px;
+    color: #999999;
+}
+
+
+/* ==================================================
+   DEPREM
+================================================== */
+
+.live-data-badge {
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: var(--red);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+
+.quake {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+
+.quake > strong {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--light-blue);
+    color: var(--navy);
+    font-size: 18px;
+}
+
+
+.quake b {
+    display: block;
+    font-size: 14px;
+}
+
+
+.quake small {
+    display: block;
+    margin-top: 5px;
+    color: #999999;
+    font-size: 11px;
+}
+
+
+.earthquake button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 11px;
+    border: 0;
+    border-radius: 25px;
+    background: var(--light-blue);
+    color: var(--navy);
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   HABERLER
+================================================== */
+
+.news-section {
+    margin-top: 25px;
+}
+
+
+.categories {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+
+.categories a {
+    flex-shrink: 0;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+
+.categories .active {
+    background: var(--navy);
+    color: #ffffff;
+}
+
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+.news-card img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   GALERİ
+================================================== */
+
+.middle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+
+.gallery-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 15px;
+}
+
+
+.big-image {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+.small-images {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.small-images > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.small-images img {
+    width: 95px;
+    height: 82px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.small-images span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ==================================================
+   SOSYAL
+================================================== */
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+
+.social-grid article {
+    min-height: 175px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+
+.social-grid b {
+    color: var(--navy);
+    font-size: 13px;
+}
+
+
+.social-grid hr {
+    margin: 12px 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+}
+
+
+.social-grid p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.social-grid small {
+    display: block;
+    margin-top: 20px;
+    color: #777777;
+}
+
+
+/* ==================================================
+   PROMO
+================================================== */
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+
+.promo-card {
+    min-height: 140px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    border-radius: 22px;
+    background: var(--cream);
+}
+
+
+.promo-card > i {
+    color: var(--red);
+    font-size: 38px;
+}
+
+
+.promo-card div {
+    flex: 1;
+}
+
+
+.promo-card h3 {
+    margin-bottom: 7px;
+    color: var(--blue);
+    font-size: 13px;
+}
+
+
+.promo-card p {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+.promo-card > span {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    padding: 45px 5%;
+    display: grid;
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr
+        1.2fr
+        1.5fr;
+    gap: 35px;
+    background: var(--navy);
+    color: #ffffff;
+}
+
+
+footer h3 {
+    margin-bottom: 15px;
+}
+
+
+footer p,
+footer a {
+    display: block;
+    margin: 7px 0;
+    color: #ead9de;
+    font-size: 13px;
+}
+
+
+.footer-social i {
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+
+.subscribe-form {
+    display: flex;
+    margin-top: 12px;
+}
+
+
+.subscribe-form input {
+    min-width: 0;
+    flex: 1;
+    padding: 12px 15px;
+    border: 0;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+}
+
+
+.subscribe-form button {
+    width: 45px;
+    border: 0;
+    border-radius: 0 25px 25px 0;
+    background: var(--red);
+    color: #ffffff;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1250px) {
+
+    .header {
+        flex-wrap: wrap;
+        padding: 25px 0;
+    }
+
+
+    .header-info {
+        margin-left: 0;
+    }
+
+
+    .top-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .main-news {
+        grid-column: span 2;
+    }
+
+
+    .featured-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .news-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+
+    .middle-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .pharmacy-list {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+
+    footer {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+
+/* ==================================================
+   TELEFON
+================================================== */
+
+@media (max-width: 800px) {
+
+    .live-bar,
+    .live-label,
+    .ticker-window,
+    .breaking {
+        height: 54px;
+    }
+
+
+    .live-label {
+        padding: 0 18px;
+        font-size: 15px;
+    }
+
+
+    .breaking {
+        min-width: 350px;
+        padding: 0 20px;
+        font-size: 13px;
+    }
+
+
+    .header {
+        align-items: flex-start;
+    }
+
+
+    .header-info {
+        width: 100%;
+    }
+
+
+    .weather,
+    .sea {
+        padding: 0 15px 0 0;
+        border: 0;
+    }
+
+
+    .social-header {
+        width: 100%;
+    }
+
+
+    .navbar {
+        border-radius: 15px;
+    }
+
+
+    .navbar .newsletter {
+        margin-left: 0;
+    }
+
+
+    .top-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .main-news {
+        grid-column: auto;
+        min-height: 520px;
+    }
+
+
+    .main-news-content {
+        padding-right: 0;
+        bottom: 75px;
+    }
+
+
+    .featured-grid,
+    .news-grid,
+    .social-grid,
+    .promo-grid,
+    .pharmacy-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery-content {
+        grid-template-columns: 1fr;
+    }
+
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ==================================================
+   KÜÇÜK TELEFON
+================================================== */
+
+@media (max-width: 500px) {
+
+    .container,
+    .header,
+    .navbar {
+        width: 92%;
+    }
+
+
+    .container {
+        margin-top: 25px;
+    }
+
+
+    .logo-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 27px;
+    }
+
+
+    .logo-text strong {
+        font-size: 27px;
+    }
+
+
+    .logo-text span {
+        font-size: 12px;
+    }
+
+
+    .main-news {
+        min-height: 470px;
+        border-radius: 18px;
+    }
+
+
+    .main-news-content {
+        left: 17px;
+        right: 17px;
+        bottom: 70px;
+        padding-right: 0;
+    }
+
+
+    .main-news-content h1 {
+        font-size: 28px;
+    }
+
+
+    .today-box,
+    .status-box,
+    .featured-section,
+    .earthquake,
+    .news-section,
+    .gallery,
+    .social,
+    .pharmacy-panel {
+        border-radius: 18px;
+    }
+
+
+    .pharmacy-panel {
+        padding: 17px;
+    }
+
+
+    .pharmacy-panel-header h2 {
+        font-size: 20px;
+    }
+
+
+    .pharmacy-source span {
+        display: block;
+        margin-top: 5px;
+        margin-left: 0;
+    }
+
+
+    .big-image {
+        height: 220px;
+    }
+
+}
